@@ -1,0 +1,68 @@
+.footer {
+  background-color: var(--red);
+
+  &__marple {
+    flex: 1 0 auto;
+    display: flex;
+    margin-top: -120px;
+  }
+
+  &__marple-image {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+  }
+
+  &__content {
+    @include font-size(2rem);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    @include rfs(4rem, padding-top);
+    @include rfs(4rem, padding-bottom);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    @include underline;
+    color: var(--blue-black);
+    text-decoration: none;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &:hover::after {
+      animation: shake-vertical 600ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+  }
+}
+
+@keyframes shake-vertical {
+  10%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(3px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}

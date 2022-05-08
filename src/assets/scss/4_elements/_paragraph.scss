@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+p {
+  @include margin-top(2rem);
+  line-height: math.div(3, 2);
+}

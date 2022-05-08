@@ -1,0 +1,37 @@
+.container {
+  @include padding-left(2rem);
+  @include padding-right(2rem);
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @media only screen and (min-width: 664px) {
+    @include padding-left(6rem);
+    @include padding-right(6rem);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    @include padding-left(12rem);
+    @include padding-right(12rem);
+  }
+
+  &--narrow {
+    max-width: var(--container-max-width);
+
+    @media only screen and (min-width: 664px) {
+      @include padding-left(4rem);
+      @include padding-right(4rem);
+    }
+
+    @media only screen and (min-width: 1440px) {
+      @include padding-left(6rem);
+      @include padding-right(6rem);
+    }
+  }
+
+  &--vertical {
+    @include rfs(12rem, padding-top);
+    @include rfs(12rem, padding-bottom);
+  }
+}

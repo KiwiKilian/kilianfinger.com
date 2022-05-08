@@ -1,0 +1,38 @@
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  @include margin-bottom(-1rem);
+
+  &__item {
+    @include rfs(1.5rem);
+    @include padding-top(0.25rem);
+    @include padding-bottom(0.25rem);
+    @include padding-right(0.5rem);
+    @include padding-left(0.5rem);
+    @include margin-bottom(0.5rem);
+    white-space: nowrap;
+    background-color: var(--blue-black);
+    color: white;
+
+    &:not(:last-child) {
+      @include margin-right(0.5rem);
+    }
+
+    &--light {
+      font-weight: 600;
+      background-color: var(--blueish-white);
+      color: var(--blue-black);
+
+      //@media (prefers-color-scheme: dark) {
+      //  background-color: $medium-grey;
+      //  color: $white;
+      //}
+    }
+  }
+
+  &__link {
+    color: white;
+    text-decoration: underline;
+  }
+}

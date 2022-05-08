@@ -1,0 +1,25 @@
+{
+  "name": "kilianfinger.com",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf _site",
+    "format": "prettier --write **/*.{js,s?css,yml} !_site"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "rfs": "^9.0.6"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.9",
+    "@11ty/eleventy-img": "^2.0.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-vite": "^1.0.0-canary.1",
+    "cheerio": "^1.0.0-rc.10",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^4.1.0",
+    "outdent": "^0.8.0",
+    "prettier": "2.6.2",
+    "rimraf": "^3.0.2"
+  }
+}

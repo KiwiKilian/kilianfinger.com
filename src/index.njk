@@ -1,0 +1,86 @@
+---
+layout: base_layout
+namespace: home
+---
+
+<div class="boxed">
+  <div class="container">
+    <div class="intro">
+      <div class="intro__text">
+        <h1 class="intro__name">Kilian <span>Finger</span></h1>
+        <h2 class="intro__title">Full Stack Developer</h2>
+      </div>
+
+      <div class="intro__portrait-wrapper js-intro-portrait">
+        {% image "kilian_2.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--2" %}
+
+        {% image "kilian_1.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--1" %}
+
+        {% image "kilian_3.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--3" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="container container--narrow container--vertical">
+    <h2>Hey there</h2>
+    <p>I'm Kilian 👨🏼‍💻 a full stack developer from Germany 🇩🇪 currently based at the foot of the alps in Salzburg,
+      Austria 🇦🇹. After my Bachelor of Science in Cologne I worked a few years as a full stack developer at a
+      digital agency. Now I'm finishing my Master of Science in Salzburg and work at a mobility consultancy to
+      improve sustainable development by building web applications and native apps.</p>
+  </div>
+</div>
+
+
+<div class="projects">
+  <div class="container container--narrow">
+    <h2 class="projects__heading">Projects</h2>
+
+    <div class="projects__items">
+      <a href="/projects/radlkarte/" class="projects__item projects__item--100" style="background-color: #00aeea;">
+        {% image "radlkarte.png", "Radlkarte Salzburg", "", "projects__item-image" %}
+
+        <h3 class="projects__item-heading" >Radlkarte Salzburg</h3>
+      </a>
+
+      <a href="/projects/koeln-marathon/" class="projects__item" style="background-color: #d53741;">
+        {% image "koeln-marathon.png", "Köln Marathon", "", "projects__item-image" %}
+
+        <h3 class="projects__item-heading" style="">Köln Marathon App</h3>
+      </a>
+
+      <a href="/projects/flexpowerhub/" class="projects__item" style="background-color: #79ca32;">
+        {% image "flexpowerhub.png", "FlexPowerHub", "", "projects__item-image" %}
+
+        <h3 class="projects__item-heading" >FlexPowerHub</h3>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container container--narrow container--vertical">
+  <ul class="technologies {{ class }}">
+    {% for item in technologies %}
+      <li
+        class="technologies__item{% if item.type is defined %} technologies__item--light{% endif %}">
+        {% if item.link -%}
+          <a
+            class="technologies__link"
+            href="{{ item.link }}"
+          >{{ item.name }}</a>
+        {%- else -%}
+          {{ item.name }}{% if item.type is defined %}:{% endif %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+<div class="contact">
+  <div class="container container--narrow container--vertical">
+    <h2>Contact</h2>
+    <a href="mailto:hey@kilianfinger.com">hey@kilianfinger.com</a>
+  </div>
+</div>

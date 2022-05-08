@@ -1,0 +1,95 @@
+[
+  {
+    "type": "topic",
+    "name": "Sprachen"
+  },
+  {
+    "name": "HTML"
+  },
+  {
+    "name": "Twig"
+  },
+  {
+    "name": "CSS"
+  },
+  {
+    "name": "SCSS"
+  },
+  {
+    "name": "JavaScript"
+  },
+  {
+    "name": "TypeScript"
+  },
+  {
+    "name": "PHP"
+  },
+  {
+    "name": "Ruby"
+  },
+  {
+    "name": "Python"
+  },
+  {
+    "type": "topic",
+    "name": "Tools"
+  },
+  {
+    "name": "webpack"
+  },
+  {
+    "name": "gulp"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "GitLab CI & CD"
+  },
+  {
+    "type": "topic",
+    "name": "Frameworks"
+  },
+  {
+    "name": "React"
+  },
+  {
+    "name": "React Native"
+  },
+  {
+    "name": "Ionic"
+  },
+  {
+    "name": "Ruby on Rails"
+  },
+  {
+    "name": "Symfony"
+  },
+  {
+    "name": "WordPress"
+  },
+  {
+    "type": "topic",
+    "name": "Themen"
+  },
+  {
+    "name": "Web(site) Performance",
+    "link": "https://developers.google.com/speed/pagespeed/insights/?hl=de&url=https%3A%2F%2Fwww.finger.digital"
+  },
+  {
+    "name": "SEO"
+  },
+  {
+    "name": "SCRUM",
+    "link": "https://www.scrum.org/user/505228"
+  },
+  {
+    "name": "Fotografie"
+  },
+  {
+    "name": "Videoproduktion"
+  },
+  {
+    "name": "Influencer Marketing"
+  }
+]

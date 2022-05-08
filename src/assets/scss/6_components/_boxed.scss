@@ -1,0 +1,17 @@
+.boxed {
+  @include rfs(4rem, padding-top);
+  @include rfs(4rem, padding-bottom);
+  @include rfs(2rem, border-width);
+  border-style: solid;
+  border-color: white;
+  background-color: var(--blueish-white);
+  display: flex;
+  box-shadow: 0 2.7px 5.3px rgba(0, 0, 0, 0.028), 0 8.9px 17.9px rgba(0, 0, 0, 0.042), 0 40px 80px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 1;
+
+  @media only screen and (min-width: 664px) {
+    @include rfs(8rem, padding-top);
+    @include rfs(8rem, padding-bottom);
+  }
+}

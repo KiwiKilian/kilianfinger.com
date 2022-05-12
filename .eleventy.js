@@ -7,7 +7,7 @@ const shortcodes = require('./utils/shortcodes');
 const transforms = require('./utils/transforms');
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('src/public/favicon.*');
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {

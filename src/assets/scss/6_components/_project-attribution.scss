@@ -1,0 +1,19 @@
+.project-attribution {
+  width: 160px;
+  text-align: center;
+
+  &__label {
+    @include font-size(2rem);
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

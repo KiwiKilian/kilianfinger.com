@@ -1,0 +1,33 @@
+.project-intro {
+  @include padding(4rem);
+  background-color: var(--project-color);
+
+  &--radlkarte {
+    --project-color: var(--project-radlkarte);
+    color: white;
+  }
+
+  &--koeln-marathon {
+    --project-color: var(--project-koeln-marathon);
+    color: white;
+  }
+
+  &--flexpowerhub {
+    --project-color: var(--project-flexpowerhub);
+    color: white;
+  }
+
+  &__image {
+    margin-left: auto;
+    margin-right: auto;
+    @include margin-bottom(2rem);
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 75vh;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+}

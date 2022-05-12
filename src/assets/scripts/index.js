@@ -1,6 +1,10 @@
 import './intro-portrait.js';
 import barba from '@barba/core';
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 barba.init({
   transitions: [
     {
@@ -18,4 +22,8 @@ barba.init({
       },
     },
   ],
+});
+
+barba.hooks.enter(() => {
+  document.body.scrollTop = 0;
 });

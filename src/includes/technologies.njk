@@ -1,0 +1,17 @@
+<div class="container container--narrow container--vertical">
+    <ul class="technologies {{ class }}">
+        {% for item in technologies %}
+            <li
+                    class="technologies__item{% if item.type is defined %} technologies__item--light{% endif %}">
+                {% if item.link -%}
+                    <a
+                            class="technologies__link"
+                            href="{{ item.link }}"
+                    >{{ item.name }}</a>
+                {%- else -%}
+                    {{ item.name }}{% if item.type is defined %}:{% endif %}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -2,12 +2,12 @@
 <html class="{{ htmlClass }}" lang="{{ site.lang }}">
 <head>
   <meta charset="utf-8">
-  <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title or site.name }}{% endif %}</title>
+  <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.name }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description or site.description }}">
   <meta name="referrer" content="no-referrer-when-downgrade">
 
-  <meta property="og:title" content="{{ title or site.title or site.name }}" />
+  <meta property="og:title" content="{{ title or site.name }}" />
   <meta property="og:type" content="{{ type or site.type }}" />
   <meta property="og:url" content="{{ url or site.url }}" />
   <meta property="og:image" content="{{ image or site.image }}" />
@@ -15,6 +15,8 @@
   <meta property="og:description" content="{{ description or site.description }}" />
 
   <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body class="{{ bodyClass }}" data-barba="wrapper">
 <div class="transitioner js-transitioner"></div>

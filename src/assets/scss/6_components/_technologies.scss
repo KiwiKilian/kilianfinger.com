@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  @include margin-bottom(-1rem);
+  @include margin-bottom(-0.5rem);
 
   &__item {
     @include rfs(1.5rem);
@@ -12,17 +12,17 @@
     @include padding-left(0.5rem);
     @include margin-bottom(0.5rem);
     white-space: nowrap;
-    background-color: var(--blue-black);
-    color: white;
+    background-color: var(--blueish-white);
+    color: var(--blue-black);
 
     &:not(:last-child) {
       @include margin-right(0.5rem);
     }
 
-    &--light {
-      font-weight: 600;
-      background-color: var(--blueish-white);
-      color: var(--blue-black);
+    &--topic {
+      font-weight: 700;
+      background-color: var(--blue-black);
+      color: white;
 
       //@media (prefers-color-scheme: dark) {
       //  background-color: $medium-grey;
@@ -32,7 +32,7 @@
   }
 
   &__link {
-    color: white;
+    //color: white;
     text-decoration: underline;
   }
 }

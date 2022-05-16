@@ -1,21 +1,7 @@
 .project-intro {
   @include padding(4rem);
   background-color: var(--project-color);
-
-  &--radlkarte {
-    --project-color: var(--project-radlkarte);
-    color: white;
-  }
-
-  &--koeln-marathon {
-    --project-color: var(--project-koeln-marathon);
-    color: white;
-  }
-
-  &--flexpowerhub {
-    --project-color: var(--project-flexpowerhub);
-    color: white;
-  }
+  color: white;
 
   &__image {
     margin-left: auto;

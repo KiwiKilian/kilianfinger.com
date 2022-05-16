@@ -1,0 +1,35 @@
+{
+  "technologies": [
+    {
+      "type": "topic",
+      "name": "Language"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "type": "topic",
+      "name": "Framework"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "GitLab CI & CD"
+    },
+    {
+      "name": "OpenAPI Clients"
+    },
+    {
+      "type": "topic",
+      "name": "Topics"
+    },
+    {
+      "name": "Geodata"
+    }
+  ]
+}

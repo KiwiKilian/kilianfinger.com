@@ -1,0 +1,5 @@
+.project-details {
+  display: flex;
+  align-items: center;
+  @include rfs(8rem, gap);
+}

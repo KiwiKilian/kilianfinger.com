@@ -1,0 +1,38 @@
+{
+  "technologies": [
+    {
+      "type": "topic",
+      "name": "Languages"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "PHP"
+    },
+    {
+      "type": "topic",
+      "name": "Frameworks"
+    },
+    {
+      "name": "Ionic (Angular)"
+    },
+    {
+      "name": "Symfony"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "GitLab CI & CD"
+    },
+    {
+      "type": "topic",
+      "name": "Topics"
+    },
+    {
+      "name": "Load Balancing"
+    }
+  ]
+}

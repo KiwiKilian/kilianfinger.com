@@ -1,0 +1,25 @@
+{
+  "technologies": [
+    {
+      "type": "topic",
+      "name": "Language"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "type": "topic",
+      "name": "Framework"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "GitLab CI & CD"
+    }
+  ]
+}

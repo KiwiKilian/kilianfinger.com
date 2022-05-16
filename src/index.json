@@ -1,0 +1,64 @@
+{
+  "technologies": [
+    {
+      "type": "topic",
+      "name": "Languages"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Twig/Nunjucks"
+    },
+    {
+      "name": "SCSS"
+    },
+    {
+      "type": "topic",
+      "name": "Frameworks"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "React Native"
+    },
+    {
+      "name": "NestJS"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "Docker"
+    },
+    {
+      "name": "GitLab CI & CD"
+    },
+    {
+      "name": "OpenAPI"
+    },
+    {
+      "type": "topic",
+      "name": "Topics"
+    },
+    {
+      "name": "Web(site) Performance",
+      "link": "https://developers.google.com/speed/pagespeed/insights/?hl=de&url=https%3A%2F%2Fwww.finger.digital"
+    },
+    {
+      "name": "SEO"
+    },
+    {
+      "name": "SCRUM",
+      "link": "https://www.scrum.org/user/505228"
+    },
+    {
+      "name": "Photography"
+    },
+    {
+      "name": "Turning code into bikes"
+    }
+  ]
+}

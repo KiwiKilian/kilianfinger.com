@@ -25,5 +25,10 @@ barba.init({
 });
 
 barba.hooks.enter(() => {
-  document.body.scrollTop = 0;
+  // document.body.scrollTop = 0;
+});
+
+barba.hooks.afterEnter(() => {
+  // document.body.scrollTop = 0;
+  history.scrollRestoration = 'manual';
 });

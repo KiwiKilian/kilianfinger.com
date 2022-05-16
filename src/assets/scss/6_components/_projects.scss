@@ -1,6 +1,6 @@
 .projects {
-  text-align: center;
   @include margin-bottom(2rem);
+  background-color: var(--blueish-white);
 
   @media only screen and (min-width: 664px) {
     @include margin-bottom(4rem);
@@ -11,14 +11,14 @@
   }
 
   &__heading {
+    @extend .h1;
     display: inline-block;
     @include underline;
-    @include font-size(6rem);
-    @include margin-top(2rem);
     @include margin-bottom(2rem);
   }
 
   &__items {
+    text-align: center;
     display: grid;
     @include rfs(2rem, grid-row-gap);
 
@@ -30,17 +30,18 @@
   }
 
   &__item {
-    aspect-ratio: 1/1;
     width: 100%;
     display: block;
     position: relative;
     z-index: 0;
-    @include padding(4rem);
-    background-color: var(--blueish-white);
+    background-color: var(--project-color);
     overflow: hidden;
     color: white;
+    @include padding(2rem);
+    aspect-ratio: 1/1;
 
     @media only screen and (min-width: 664px) {
+      @include padding(4rem);
       aspect-ratio: 1.5/1;
     }
 
@@ -51,12 +52,6 @@
     &:hover {
       .projects__item-image {
         transform: scale(1.1);
-      }
-    }
-
-    &--100 {
-      @media only screen and (min-width: 996px) {
-        grid-column: span 2;
       }
     }
   }
@@ -71,20 +66,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center top;
     transform-origin: center bottom;
     transition: transform 600ms ease;
     z-index: -1;
-
-    &--contain {
-      height: 60%;
-      object-fit: contain;
-      object-position: center bottom;
-    }
   }
 
   &__item-heading {
     @include font-size(4rem);
+    background-color: var(--blue-black);
+    display: inline-block;
+    @include padding-right(1rem);
+    @include padding-left(1rem);
     text-shadow: 1.8px 1.8px 3.6px rgba(0, 0, 0, 0.028), 5px 5px 10px rgba(0, 0, 0, 0.04),
       12.1px 12.1px 24.1px rgba(0, 0, 0, 0.052), 40px 40px 80px rgba(0, 0, 0, 0.08);
   }

@@ -1,0 +1,39 @@
+---
+layout: base_layout
+---
+
+<div class="project-intro">
+    {% image projectSlug~"-mockup.png", title, "", "project-intro__image" %}
+    <h1 class="project-intro__heading">{{ title }}</h1>
+</div>
+
+<div class="container container--narrow container--vertical">
+    {{ content | safe }}
+
+    <div class="project-details">
+        {% include 'technologies.njk' %}
+
+        {% if projectAttribution %}
+            <div class="project-attribution">
+                <p class="project-attribution__label">A project of</p>
+
+                {% if projectAttribution == 'trafficon' %}
+                    <a href="https://www.trafficon.eu/">
+                        <img class="project-attribution__image" alt="Trafficon" src="/assets/images/trafficon.svg"/>
+                    </a>
+                {% endif %}
+
+                {% if projectAttribution == 'pooliestudios' %}
+                    <a href="https://pooliestudios.com/">
+                        <img class="project-attribution__image" alt="pooliestudios"
+                             src="/assets/images/pooliestudios.svg"/>
+                    </a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+

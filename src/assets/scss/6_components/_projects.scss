@@ -1,21 +1,5 @@
 .projects {
-  @include margin-bottom(2rem);
   background-color: var(--blueish-white);
-
-  @media only screen and (min-width: 664px) {
-    @include margin-bottom(4rem);
-  }
-
-  @media only screen and (min-width: 1440px) {
-    @include margin-bottom(6rem);
-  }
-
-  &__heading {
-    @extend .h1;
-    display: inline-block;
-    @include underline;
-    @include margin-bottom(2rem);
-  }
 
   &__items {
     text-align: center;

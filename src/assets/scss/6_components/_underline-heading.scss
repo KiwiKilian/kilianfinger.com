@@ -1,0 +1,6 @@
+.underline-heading {
+  @extend .h1;
+  display: inline-block;
+  @include underline;
+  @include margin-bottom(2rem);
+}

@@ -1,17 +1,12 @@
 .footer {
   background-color: var(--red);
 
-  &__marple {
-    flex: 1 0 auto;
-    display: flex;
-    margin-top: -120px;
-  }
-
   &__marple-image {
     display: block;
-    width: 100%;
+    width: 20vw;
     max-width: 160px;
     height: auto;
+    margin-top: max(-10vw, -80px);
   }
 
   &__content {
@@ -26,8 +21,14 @@
     @include rfs(4rem, padding-bottom);
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media only screen and (min-width: 996px) {
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+    }
   }
 
   &__link {

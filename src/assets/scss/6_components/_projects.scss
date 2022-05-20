@@ -26,11 +26,6 @@
 
     @media only screen and (min-width: 664px) {
       @include padding(4rem);
-      aspect-ratio: 1.5/1;
-    }
-
-    @media only screen and (min-width: 996px) {
-      aspect-ratio: 1 / 1;
     }
 
     &:hover {

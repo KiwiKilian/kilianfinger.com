@@ -12,11 +12,9 @@ namespace: home
             </div>
 
             <div class="intro__portrait-wrapper js-intro-portrait">
-                {% image "kilian_2.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--2" %}
-
-                {% image "kilian_1.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--1" %}
-
-                {% image "kilian_3.jpeg", "Kilian Finger", "", "intro__portrait intro__portrait--3" %}
+                {% image { src: "kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--2" } %}
+                {% image { src: "kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--1" } %}
+                {% image { src: "kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--3" } %}
             </div>
         </div>
     </div>
@@ -38,19 +36,20 @@ namespace: home
 
     <div class="projects__items">
         <a href="/projects/radlkarte/" class="projects__item project--radlkarte">
-            {% image "radlkarte-home.png", "Radlkarte Salzburg", "", "projects__item-image" %}
+            {% image { src: "radlkarte-home.png", alt: "Radlkarte Salzburg", class: "projects__item-image" } %}
 
             <h3 class="projects__item-heading">Radlkarte Salzburg</h3>
         </a>
 
         <a href="/projects/koeln-marathon/" class="projects__item project--koeln-marathon">
-            {% image "koeln-marathon-home.png", "Köln Marathon", "", "projects__item-image" %}
+            {% image { src: "koeln-marathon-home.png", alt: "Köln Marathon", class: "projects__item-image" } %}
+
 
             <h3 class="projects__item-heading" style="">Köln Marathon App</h3>
         </a>
 
         <a href="/projects/flexpowerhub/" class="projects__item project--flexpowerhub">
-            {% image "flexpowerhub-home.png", "FlexPowerHub", "", "projects__item-image" %}
+            {% image { src: "flexpowerhub-home.png", alt: "FlexPowerHub", class: "projects__item-image" } %}
 
             <h3 class="projects__item-heading">FlexPowerHub</h3>
         </a>

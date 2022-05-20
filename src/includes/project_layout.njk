@@ -3,7 +3,7 @@ layout: base_layout
 ---
 
 <div class="project-intro">
-    {% image projectSlug~"-mockup.png", title, "", "project-intro__image" %}
+    {% image { src: projectSlug~"-mockup.png", alt: title, class: "project-intro__image" } %}
     <h1 class="project-intro__heading">{{ title }}</h1>
 </div>
 

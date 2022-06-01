@@ -6,21 +6,25 @@
     "clean": "rimraf _site",
     "format": "prettier --write **/*.{js,s?css,yml} !_site"
   },
+  "engines": {
+    "node": "^16.15.0",
+    "npm": "^8.7.0"
+  },
   "dependencies": {
-    "@barba/core": "^2.9.7",
-    "rfs": "^9.0.6"
+    "@barba/core": "2.9.7",
+    "rfs": "9.0.6"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.11",
-    "@11ty/eleventy-img": "^2.0.0",
-    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy": "2.0.0-canary.11",
+    "@11ty/eleventy-img": "2.0.1",
+    "@11ty/eleventy-navigation": "0.3.3",
     "@11ty/eleventy-plugin-vite": "github:dasplan/eleventy-plugin-vite#patch-1",
-    "cheerio": "^1.0.0-rc.10",
-    "html-minifier": "^4.0.0",
-    "js-yaml": "^4.1.0",
-    "outdent": "^0.8.0",
+    "cheerio": "1.0.0-rc.11",
+    "html-minifier": "4.0.0",
+    "js-yaml": "4.1.0",
+    "outdent": "0.8.0",
     "prettier": "2.6.2",
-    "rimraf": "^3.0.2",
-    "sass": "^1.51.0"
+    "rimraf": "3.0.2",
+    "sass": "1.52.1"
   }
 }

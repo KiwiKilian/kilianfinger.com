@@ -30,6 +30,17 @@
     },
     {
       "name": "Geodata"
+    },
+    {
+      "name": "Mapbox"
+    },
+    {
+      "type": "topic",
+      "name": "Live"
+    },
+    {
+      "name": "www.radlkarte.info",
+      "link": "https://www.radlkarte.info/"
     }
   ]
 }

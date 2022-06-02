@@ -15,22 +15,26 @@ layout: base_layout
 
         {% if projectAttribution %}
             <div class="project-attribution">
-                <p class="project-attribution__label">A project of</p>
+                <div class="project-attribution__label">A project of</div>
 
                 {% if projectAttribution == 'trafficon' %}
                     <a href="https://www.trafficon.eu/">
-                        <img class="project-attribution__image" alt="Trafficon" src="/assets/images/trafficon.svg"/>
+                        <img class="project-attribution__image" alt="Trafficon" src="/assets/images/trafficon.svg" />
                     </a>
                 {% endif %}
 
                 {% if projectAttribution == 'pooliestudios' %}
                     <a href="https://pooliestudios.com/">
                         <img class="project-attribution__image" alt="pooliestudios"
-                             src="/assets/images/pooliestudios.svg"/>
+                             src="/assets/images/pooliestudios.svg" />
                     </a>
                 {% endif %}
             </div>
         {% endif %}
+    </div>
+
+    <div class="project-back">
+        <a href="/" class="project-back__link">‹ Back to all <span>Projects</span></a>
     </div>
 </div>
 

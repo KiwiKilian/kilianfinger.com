@@ -52,7 +52,7 @@
   }
 
   &__item-heading {
-    @include font-size(4rem);
+    @include font-size(3rem);
     background-color: var(--blue-black);
     display: inline-block;
     @include padding-right(1rem);

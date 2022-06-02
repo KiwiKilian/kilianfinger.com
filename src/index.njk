@@ -31,39 +31,47 @@ namespace: home
     </div>
 </div>
 
-<div class="projects container container--vertical">
-    <h2 class="underline-heading">Projects</h2>
+<section class="projects">
+    <div class="container container--narrow container--vertical js-projects">
+        <h2 class="underline-heading">Projects</h2>
 
-    <div class="projects__items">
-        <a href="/projects/radlkarte/" class="projects__item project--radlkarte">
-            {% image { src: "radlkarte-home.png", alt: "Radlkarte Salzburg", class: "projects__item-image" } %}
+        <div class="projects__items">
+            <a href="/projects/radlkarte/" class="projects__item project--radlkarte">
+                {% image { src: "radlkarte-home.png", alt: "Radlkarte Salzburg", class: "projects__item-image" } %}
 
-            <h3 class="projects__item-heading">Radlkarte Salzburg</h3>
-        </a>
+                <h3 class="projects__item-heading">Radlkarte Salzburg</h3>
+            </a>
 
-        <a href="/projects/koeln-marathon/" class="projects__item project--koeln-marathon">
-            {% image { src: "koeln-marathon-home.png", alt: "Köln Marathon", class: "projects__item-image" } %}
+            <a href="/projects/koeln-marathon/" class="projects__item project--koeln-marathon">
+                {% image { src: "koeln-marathon-home.png", alt: "Köln Marathon", class: "projects__item-image" } %}
 
 
-            <h3 class="projects__item-heading" style="">Köln Marathon App</h3>
-        </a>
+                <h3 class="projects__item-heading" style="">Köln Marathon App</h3>
+            </a>
 
-        <a href="/projects/flexpowerhub/" class="projects__item project--flexpowerhub">
-            {% image { src: "flexpowerhub-home.png", alt: "FlexPowerHub", class: "projects__item-image" } %}
+            <a href="/projects/flexpowerhub/" class="projects__item project--flexpowerhub">
+                {% image { src: "flexpowerhub-home.png", alt: "FlexPowerHub", class: "projects__item-image" } %}
 
-            <h3 class="projects__item-heading">FlexPowerHub</h3>
-        </a>
+                <h3 class="projects__item-heading">FlexPowerHub</h3>
+            </a>
+        </div>
     </div>
-</div>
+</section>
 
-<div class="container container--narrow container--vertical">
-    <h2 class="underline-heading">Technologies</h2>
-    {% include 'technologies.njk' %}
-</div>
+<section>
+    <div class="container container--narrow container--vertical">
+        <h2 class="underline-heading">Technologies</h2>
 
-<div class="contact">
+        {% include 'technologies.njk' %}
+
+        <p>These are technologies I'm fond of. I'm always open to dive into something new. But when starting on a green
+            field, I will focus on these, which allow me to build resilient solutions for you.</p>
+    </div>
+</section>
+
+<section class="contact">
     <div class="container container--narrow container--vertical">
         <h2>Contact</h2>
         <a href="mailto:hey@kilianfinger.com">hey@kilianfinger.com</a>
     </div>
-</div>
+</section>

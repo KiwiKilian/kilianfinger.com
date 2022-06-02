@@ -1,7 +1,13 @@
 .project-details {
-  @media only screen and (min-width: 996px) {
+  @include margin-top(2rem);
+
+  @media only screen and (min-width: 664px) {
     display: flex;
     align-items: center;
-    @include rfs(8rem, gap);
+    @include rfs(2rem, gap);
+  }
+
+  @media only screen and (min-width: 996px) {
+    @include rfs(4rem, gap);
   }
 }

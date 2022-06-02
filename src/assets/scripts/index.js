@@ -24,11 +24,10 @@ barba.init({
   ],
 });
 
-barba.hooks.enter(() => {
-  // document.body.scrollTop = 0;
-});
-
-barba.hooks.afterEnter(() => {
-  // document.body.scrollTop = 0;
-  history.scrollRestoration = 'manual';
+barba.hooks.enter((data) => {
+  if (data.next.namespace === 'home' && data.current.namespace.startsWith('projects/')) {
+    document.querySelector('.js-projects').scrollIntoView();
+  } else {
+    document.body.scrollTop = 0;
+  }
 });

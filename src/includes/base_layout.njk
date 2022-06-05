@@ -14,9 +14,10 @@
     <meta property="og:site_name" content="{{ name or site.name }}"/>
     <meta property="og:description" content="{{ description or site.description }}"/>
 
-    <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
-
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
+    <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload">
+    <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
 </head>
 <body data-barba="wrapper">
 <div class="transitioner js-transitioner"></div>

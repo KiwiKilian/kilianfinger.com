@@ -12,9 +12,9 @@ namespace: home
             </div>
 
             <div class="intro__portrait-wrapper js-intro-portrait">
-                {% image { src: "kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--2" } %}
-                {% image { src: "kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--1" } %}
-                {% image { src: "kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--3" } %}
+                {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--2", sizeType: "portrait", loading: "eager" } %}
+                {% image { src: "home/kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--1", sizeType: "portrait" } %}
+                {% image { src: "home/kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--3", sizeType: "portrait" } %}
             </div>
         </div>
     </div>
@@ -36,23 +36,23 @@ namespace: home
         <h2 class="underline-heading">Projects</h2>
 
         <div class="projects__items">
-            <a href="/projects/radlkarte/" class="projects__item project--radlkarte">
-                {% image { src: "radlkarte-home.png", alt: "Radlkarte Salzburg", class: "projects__item-image" } %}
+            <a href="/projects/radlkarte-salzburg/" class="projects__item project--radlkarte-salzburg">
+                {% image { src: "home/radlkarte-salzburg.png", alt: "Radlkarte Salzburg", class: "projects__item-image", sizeType: "projectsCover" } %}
 
                 <h3 class="projects__item-heading">Radlkarte Salzburg</h3>
             </a>
 
             <a href="/projects/koeln-marathon/" class="projects__item project--koeln-marathon">
-                {% image { src: "koeln-marathon-home.png", alt: "Köln Marathon", class: "projects__item-image" } %}
+                {% image { src: "home/koeln-marathon.png", alt: "Köln Marathon", class: "projects__item-image", sizeType: "projectsCover" } %}
 
 
-                <h3 class="projects__item-heading" style="">Köln Marathon App</h3>
+                <h3 class="projects__item-heading" style="">Köln Marathon</h3>
             </a>
 
             <a href="/projects/flexpowerhub/" class="projects__item project--flexpowerhub">
-                {% image { src: "flexpowerhub-home.png", alt: "FlexPowerHub", class: "projects__item-image" } %}
+                {% image { src: "home/flexpowerhub.png", alt: "FlexPowerHub", class: "projects__item-image", sizeType: "projectsCover" } %}
 
-                <h3 class="projects__item-heading">FlexPowerHub</h3>
+                <h3 class="projects__item-heading">FlexPower&shy;Hub</h3>
             </a>
         </div>
     </div>

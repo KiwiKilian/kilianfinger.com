@@ -3,10 +3,15 @@
 
   &__marple-image {
     display: block;
-    width: 20vw;
+    width: 30vw;
     max-width: 160px;
+    margin-top: -15vw;
     height: auto;
-    margin-top: max(-10vw, -80px);
+
+    @media only screen and (min-width: 664px) {
+      width: 160px;
+      margin-top: -80px;
+    }
   }
 
   &__content {

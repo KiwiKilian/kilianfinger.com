@@ -90,6 +90,7 @@
   }
 
   &__portrait {
+    display: block;
     width: 65vw;
     height: auto;
     @include rfs(1rem, border-width);

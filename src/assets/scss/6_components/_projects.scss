@@ -6,7 +6,7 @@
     display: grid;
     @include rfs(2rem, grid-row-gap);
 
-    @media only screen and (min-width: 996px) {
+    @media only screen and (min-width: 664px) {
       @include rfs(4rem, grid-column-gap);
       @include rfs(4rem, grid-row-gap);
       grid-template-columns: repeat(2, 1fr);

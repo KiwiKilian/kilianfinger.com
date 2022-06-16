@@ -1,16 +1,19 @@
 const portraitWrapper = document.querySelector('.js-intro-portrait');
-const portraits = document.querySelectorAll('.js-intro-portrait picture');
+const portraits = document.querySelectorAll('.js-intro-portrait img');
 let portraitIndex = 0;
 
 const changePortrait = (event) => {
-  portraitWrapper.classList.remove('shake');
+  portraitWrapper.classList.remove('is-shaking');
   portraitWrapper.offsetWidth;
-  portraitWrapper.classList.add('shake');
+  portraitWrapper.classList.add('is-shaking');
+  const nextPortraitIndex = (portraitIndex + 1) % 3;
+  portraits[nextPortraitIndex].classList.replace('is-hidden', 'is-loading');
 
   setTimeout(() => {
-    portraits[portraitIndex].style.display = 'none';
-    portraitIndex = (portraitIndex + 1) % 3;
-    portraits[portraitIndex].style.display = 'block';
+    portraits[portraitIndex].classList.replace('is-visible', 'is-hidden');
+    portraits[nextPortraitIndex].classList.replace('is-loading', 'is-visible');
+
+    portraitIndex = nextPortraitIndex;
   }, 600);
 };
 

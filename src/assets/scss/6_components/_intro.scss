@@ -81,16 +81,13 @@
       }
     }
 
-    &.shake {
+    &.is-shaking {
       animation: shake 600ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    }
-
-    picture:not(:first-child) {
-      display: none;
     }
   }
 
   &__portrait-canvas {
+    position: relative;
     background-color: white;
     box-shadow: 0 2.7px 5.3px rgba(0, 0, 0, 0.028), 0 8.9px 17.9px rgba(0, 0, 0, 0.042), 0 40px 80px rgba(0, 0, 0, 0.07);
     @include rfs(1rem, border-width);
@@ -106,8 +103,19 @@
     display: block;
     width: 65vw;
     height: auto;
+
     @media only screen and (min-width: 664px) {
       @include rfs(35rem, width);
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-loading {
+      position: absolute;
+      top: 0;
+      z-index: -1;
     }
   }
 }

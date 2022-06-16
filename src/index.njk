@@ -12,9 +12,11 @@ namespace: home
             </div>
 
             <div class="intro__portrait-wrapper js-intro-portrait">
-                {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--2", sizeType: "portrait", loading: "eager" } %}
-                {% image { src: "home/kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--1", sizeType: "portrait" } %}
-                {% image { src: "home/kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait intro__portrait--3", sizeType: "portrait" } %}
+                <div class="intro__portrait-canvas">
+                    {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait", sizeType: "portrait", loading: "eager" } %}
+                    {% image { src: "home/kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait", sizeType: "portrait" } %}
+                    {% image { src: "home/kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait", sizeType: "portrait" } %}
+                </div>
             </div>
         </div>
     </div>

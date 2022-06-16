@@ -1,5 +1,6 @@
 .project-intro {
   @include padding(4rem);
+  @include padding(4rem);
   background-color: var(--project-color);
   color: white;
 
@@ -10,7 +11,7 @@
     display: block;
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: 1920px;
     max-height: 75vh;
   }
 

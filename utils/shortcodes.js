@@ -18,10 +18,12 @@ module.exports = {
       sizes = {
         portrait: '(min-width: 1920px): 496px, (min-width: 664px): 30vw, 60vw',
         projectsCover: '(min-width: 1400px) 600px, (min-width: 664px) 48vw, 98vw',
+        projectsMockup: '(min-width: 2048px) 1920px, (min-width: 664px) 93vw, 85vw',
       }[sizeType];
       widths = {
         portrait: [248, 496, 992],
         projectsCover: [150, 300, 600, 1200],
+        projectsMockup: [768, 1024, 1440, 1920],
       }[sizeType];
     }
 

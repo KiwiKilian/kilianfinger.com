@@ -7,26 +7,28 @@
     <meta name="description" content="{{ description or site.description }}">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
-    <meta property="og:title" content="{{ title or site.name }}"/>
-    <meta property="og:type" content="{{ type or site.type }}"/>
-    <meta property="og:url" content="{{ url or site.url }}"/>
-    <meta property="og:image" content="{{ image or site.image }}"/>
-    <meta property="og:site_name" content="{{ name or site.name }}"/>
-    <meta property="og:description" content="{{ description or site.description }}"/>
+    <meta property="og:title" content="{{ title or site.name }}" />
+    <meta property="og:type" content="{{ type or site.type }}" />
+    <meta property="og:url" content="{{ url or site.url }}" />
+    <meta property="og:image" content="{{ image or site.image }}" />
+    <meta property="og:site_name" content="{{ name or site.name }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
     <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload">
     <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
 </head>
-<body data-barba="wrapper">
+<body>
 <div class="transitioner js-transitioner"></div>
 
-<main data-barba="container" data-barba-namespace="{{ namespace }}">
-    <div class="{{ bodyClass }}">
-        {{ content | safe }}
-    </div>
-</main>
+<div data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="{{ namespace }}">
+        <div class="{{ bodyClass }}">
+            {{ content | safe }}
+        </div>
+    </main>
+</div>
 
 {% include 'footer.njk' %}
 

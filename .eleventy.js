@@ -9,6 +9,7 @@ const transforms = require('./utils/transforms');
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('src/public/!(*.njk)');
   eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.setServerPassthroughCopyBehavior('copy');
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {

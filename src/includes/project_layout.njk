@@ -3,7 +3,7 @@ layout: base_layout
 ---
 
 <div class="project-intro">
-    {% image { src: "projects/"~projectSlug~".png", alt: title, class: "project-intro__image", sizeType: "projectsMockup" } %}
+    {% image { src: "projects/"~projectSlug~".png", alt: title, class: "project-intro__image", sizeType: "projectsMockup", loading: "eager" } %}
     <h1 class="project-intro__heading">{{ title }}</h1>
 </div>
 
@@ -19,7 +19,8 @@ layout: base_layout
 
                 {% if projectAttribution == 'trafficon' %}
                     <a href="https://www.trafficon.eu/">
-                        <img class="project-attribution__image" alt="Trafficon" src="/assets/images/projects/trafficon.svg" />
+                        <img class="project-attribution__image" alt="Trafficon"
+                             src="/assets/images/projects/trafficon.svg" />
                     </a>
                 {% endif %}
 

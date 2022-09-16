@@ -38,24 +38,13 @@ namespace: home
         <h2 class="underline-heading">Projects</h2>
 
         <div class="projects__items">
-            <a href="/projects/radlkarte-salzburg/" class="projects__item project--radlkarte-salzburg">
-                {% image { src: "home/radlkarte-salzburg.png", alt: "Radlkarte Salzburg", class: "projects__item-image", sizeType: "projectsCover" } %}
+            {% for project in projects %}
+                <a href="/projects/{{ project.slug }}/" class="projects__item project--{{ project.slug }}">
+                    {% image { src: "home/"~project.slug~".png", alt: project.title, class: "projects__item-image", sizeType: "projectsCover" } %}
 
-                <h3 class="projects__item-heading">Radlkarte Salzburg</h3>
-            </a>
-
-            <a href="/projects/koeln-marathon/" class="projects__item project--koeln-marathon">
-                {% image { src: "home/koeln-marathon.png", alt: "Köln Marathon", class: "projects__item-image", sizeType: "projectsCover" } %}
-
-
-                <h3 class="projects__item-heading" style="">Köln Marathon</h3>
-            </a>
-
-            <a href="/projects/flexpowerhub/" class="projects__item project--flexpowerhub">
-                {% image { src: "home/flexpowerhub.png", alt: "FlexPowerHub", class: "projects__item-image", sizeType: "projectsCover" } %}
-
-                <h3 class="projects__item-heading">FlexPower&shy;Hub</h3>
-            </a>
+                    <h3 class="projects__item-heading">{{ project.title }}</h3>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </section>

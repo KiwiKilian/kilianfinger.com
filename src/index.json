@@ -1,4 +1,18 @@
 {
+  "projects": [
+    {
+      "slug": "radlkarte-salzburg",
+      "title": "Radlkarte Salzburg"
+    },
+    {
+      "slug": "koeln-marathon",
+      "title": "Köln Marathon"
+    },
+    {
+      "slug": "flexpowerhub",
+      "title": "FlexPower"
+    }
+  ],
   "technologies": [
     {
       "type": "topic",

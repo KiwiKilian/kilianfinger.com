@@ -1,0 +1,13 @@
+.lazyload-image {
+  transform: translate3d(0, 0, 0);
+  filter: blur(16px);
+
+  &.ls-is-cached {
+    filter: blur(0);
+  }
+
+  &.lazyloaded:not(.ls-is-cached) {
+    transition: filter 500ms ease;
+    filter: blur(0);
+  }
+}

@@ -1,3 +1,4 @@
+import 'lazysizes';
 import barba from '@barba/core';
 import initializePortrait from './intro-portrait';
 

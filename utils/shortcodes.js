@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 
@@ -13,7 +14,6 @@ module.exports = {
   }) => {
     const extension = path.extname(src).slice(1).toLowerCase();
 
-    let heights;
     if (sizeType) {
       sizes = {
         portrait: '(min-width: 1920px): 496px, (min-width: 664px): 30vw, 60vw',
@@ -29,19 +29,43 @@ module.exports = {
 
     let metadata = await Image('./src/assets/images/' + src, {
       widths,
-      formats: extension === 'webp' ? ['webp', 'jpeg'] : ['webp', extension],
+      formats: ['webp', extension],
       urlPath: '/assets/images/',
       outputDir: '_site/assets/images/',
     });
 
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading,
-      decoding: 'async',
-      ...(className && { class: className }),
-    };
+    let imgData = metadata.jpeg ? metadata.jpeg[metadata.jpeg.length - 1] : metadata.png[metadata.png.length - 1];
 
-    return Image.generateHTML(metadata, imageAttributes);
+    const lqip = await Image('./src/assets/images/' + src, {
+      widths: [16],
+      formats: ['png'],
+      urlPath: '/assets/images/',
+      outputDir: '_site/assets/images/',
+    });
+    const lqipFile = fs.readFileSync(lqip.png[0].outputPath);
+    const lqipBase64 = 'data:image/png;base64,' + new Buffer(lqipFile).toString('base64');
+
+    return `<picture>
+                ${Object.values(metadata)
+                  .map(
+                    (formatMetadata) =>
+                      `<source 
+                          type="${formatMetadata[0].sourceType}"
+                          data-srcset="${formatMetadata.map(({ srcset }) => srcset).join(', ')}"
+                          sizes="${sizes}"
+                       >`,
+                  )
+                  .join('')}
+                <img
+                  class="${className} lazyload-image lazyload"
+                  src="${lqipBase64}"
+                  data-src="${imgData.url}"
+                  width="${imgData.width}"
+                  height="${imgData.height}"
+                  alt="${alt}" 
+                  loading="${loading}" 
+                  decoding="async"
+                >
+            </picture>`;
   },
 };

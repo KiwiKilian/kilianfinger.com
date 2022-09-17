@@ -43,7 +43,7 @@ module.exports = {
       outputDir: '_site/assets/images/',
     });
     const lqipFile = fs.readFileSync(lqip.png[0].outputPath);
-    const lqipBase64 = 'data:image/png;base64,' + new Buffer(lqipFile).toString('base64');
+    const lqipBase64 = 'data:image/png;base64,' + new Buffer.from(lqipFile).toString('base64');
 
     return `<picture>
                 ${Object.values(metadata)

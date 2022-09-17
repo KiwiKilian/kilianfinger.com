@@ -1,0 +1,33 @@
+diff --git a/node_modules/vite/dist/node/chunks/dep-665b0112.js b/node_modules/vite/dist/node/chunks/dep-665b0112.js
+index e793a9b..f0f3384 100644
+--- a/node_modules/vite/dist/node/chunks/dep-665b0112.js
++++ b/node_modules/vite/dist/node/chunks/dep-665b0112.js
+@@ -43202,8 +43202,8 @@ function addToHTMLProxyTransformResult(hash, code) {
+ const assetAttrsConfig = {
+     link: ['href'],
+     video: ['src', 'poster'],
+-    source: ['src', 'srcset'],
+-    img: ['src', 'srcset'],
++    source: ['src', 'srcset', 'data-src', 'data-srcset'],
++    img: ['src', 'srcset', 'data-src', 'data-srcset'],
+     image: ['xlink:href', 'href'],
+     use: ['xlink:href', 'href']
+ };
+@@ -43486,7 +43486,7 @@ function buildHtmlPlugin(config) {
+                         !namedOutput.includes(content.replace(/^\//, '')) // Allow for absolute references as named output can't be an absolute path
+                     ) {
+                         try {
+-                            const url = attr.name === 'srcset'
++                            const url = attr.name === 'srcset' || attr.name === 'data-srcset'
+                                 ? await processSrcSet(content, ({ url }) => urlToBuiltUrl(url, id, config, this))
+                                 : await urlToBuiltUrl(content, id, config, this);
+                             overwriteAttrValue(s, sourceCodeLocation, url);
+@@ -60472,7 +60472,7 @@ const processNodeUrl = (attr, sourceCodeLocation, s, config, htmlPath, originalU
+         // path will add `/a/` prefix, it will caused 404.
+         // rewrite before `./index.js` -> `localhost:5173/a/index.js`.
+         // rewrite after `../index.js` -> `localhost:5173/index.js`.
+-        const processedUrl = attr.name === 'srcset'
++        const processedUrl = attr.name === 'srcset' || attr.name === 'data-srcset'
+             ? processSrcSetSync(url, ({ url }) => replacer(url))
+             : replacer(url);
+         overwriteAttrValue(s, sourceCodeLocation, processedUrl);

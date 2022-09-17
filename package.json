@@ -4,7 +4,8 @@
     "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "rimraf _site",
-    "format": "prettier --write **/*.{js,json,scss,yml} !_site"
+    "format": "prettier --write **/*.{js,json,scss,yml} !_site",
+    "postinstall": "patch-package"
   },
   "engines": {
     "node": "^16.15.0",
@@ -24,6 +25,7 @@
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
     "outdent": "0.8.0",
+    "patch-package": "6.4.7",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "sass": "1.54.9"

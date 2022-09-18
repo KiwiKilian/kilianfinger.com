@@ -5,14 +5,18 @@
   color: white;
 
   &__image {
-    margin-left: auto;
-    margin-right: auto;
     @include margin-bottom(2rem);
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 1920px;
-    max-height: 75vh;
+    width: 100%;
+    object-fit: contain;
+
+    @media screen and (orientation: landscape) {
+      height: 60vh;
+    }
+
+    @media screen and (orientation: portrait) {
+      height: 40vh;
+    }
   }
 
   &__heading {

@@ -44,7 +44,7 @@ namespace: home
                         {% image { src: "home/"~project.slug~".png", alt: project.title, class: "projects__item-image", sizeType: "projectsCover" } %}
                     </div>
 
-                    <h3 class="projects__item-heading">{{ project.title }}</h3>
+                    <h3 class="projects__item-heading">{{ project.title | safe }}</h3>
                 </a>
             {% endfor %}
         </div>

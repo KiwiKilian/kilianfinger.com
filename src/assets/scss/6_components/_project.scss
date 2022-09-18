@@ -1,13 +1,15 @@
-.project {
+.theme-color {
+  --theme-color: var(--red);
+
   &--radlkarte-salzburg {
-    --project-color: var(--project-radlkarte);
+    --theme-color: var(--project-radlkarte);
   }
 
   &--koeln-marathon {
-    --project-color: var(--project-koeln-marathon);
+    --theme-color: var(--project-koeln-marathon);
   }
 
   &--flexpowerhub {
-    --project-color: var(--project-flexpowerhub);
+    --theme-color: var(--project-flexpowerhub);
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="{{ htmlClass }}" lang="{{ site.lang }}">
+<html lang="{{ site.lang }}">
 <head>
     <meta charset="utf-8">
     <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.name }}{% endif %}</title>
@@ -20,16 +20,11 @@
     <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload">
     <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
 </head>
-<body>
-<div class="transitioner js-transitioner" style="background-color: {{ themeColor or site.themeColor }}"></div>
+<body class="theme-color{% if projectSlug %} theme-color--{{ projectSlug }}{% endif %}">
 
-<div data-barba="wrapper">
-    <main data-barba="container" data-barba-namespace="{{ namespace }}">
-        <div class="{{ bodyClass }}">
-            {{ content | safe }}
-        </div>
-    </main>
-</div>
+<main>
+    {{ content | safe }}
+</main>
 
 {% include 'footer.njk' %}
 

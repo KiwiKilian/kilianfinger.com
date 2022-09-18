@@ -1,6 +1,5 @@
 ---
 layout: base_layout
-namespace: home
 ---
 
 <div class="boxed">
@@ -39,7 +38,7 @@ namespace: home
 
         <div class="projects__items">
             {% for project in projects %}
-                <a href="/projects/{{ project.slug }}/" class="projects__item project--{{ project.slug }}">
+                <a href="/projects/{{ project.slug }}/" class="projects__item theme-color--{{ project.slug }}">
                     <div class="projects__item-image-wrapper">
                         {% image { src: "home/"~project.slug~".png", alt: project.title, class: "projects__item-image", sizeType: "projectsCover" } %}
                     </div>

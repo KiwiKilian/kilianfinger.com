@@ -1,7 +1,7 @@
 .project-intro {
   @include padding(4rem);
   @include padding(4rem);
-  background-color: var(--project-color);
+  background-color: var(--theme-color);
   color: white;
 
   &__image {

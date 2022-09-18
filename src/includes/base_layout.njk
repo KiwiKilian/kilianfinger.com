@@ -16,11 +16,12 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
+    <meta name="theme-color" content="{{ themeColor or site.themeColor }}">
     <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload">
     <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
 </head>
 <body>
-<div class="transitioner js-transitioner"></div>
+<div class="transitioner js-transitioner" style="background-color: {{ themeColor or site.themeColor }}"></div>
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="{{ namespace }}">

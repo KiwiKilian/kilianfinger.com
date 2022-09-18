@@ -2,11 +2,11 @@ import 'lazysizes';
 import barba from '@barba/core';
 import initializePortrait from './intro-portrait';
 
+initializePortrait();
+
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
-
-initializePortrait();
 
 barba.init({
   views: [
@@ -41,6 +41,13 @@ barba.init({
 });
 
 barba.hooks.enter((data) => {
+  const parser = new DOMParser();
+  const nextDocument = parser.parseFromString(data.next.html, 'text/html');
+  const themeColor = nextDocument.querySelector('meta[name="theme-color"]').getAttribute('content');
+
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
+  document.querySelector('.js-transitioner').style.backgroundColor = themeColor;
+
   if (data.next.namespace === 'home' && data.current.namespace.startsWith('projects/')) {
     document.querySelector('.js-projects').scrollIntoView();
   } else {

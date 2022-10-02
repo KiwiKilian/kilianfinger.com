@@ -37,16 +37,12 @@
   }
 
   &__link {
-    @include underline;
+    @include underline(true);
     color: var(--blue-black);
     text-decoration: none;
     font-family: 'Gilroy', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-
-    &:hover::after {
-      animation: shake-vertical 600ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    }
   }
 }
 

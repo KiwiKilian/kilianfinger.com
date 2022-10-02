@@ -16,13 +16,13 @@
   "technologies": [
     {
       "type": "topic",
-      "name": "Languages"
+      "name": "Sprachen"
     },
     {
       "name": "TypeScript"
     },
     {
-      "name": "Twig/Nunjucks"
+      "name": "Nunjucks"
     },
     {
       "name": "SCSS"
@@ -45,6 +45,9 @@
       "name": "Tools"
     },
     {
+      "name": "Eleventy"
+    },
+    {
       "name": "Docker"
     },
     {
@@ -55,7 +58,7 @@
     },
     {
       "type": "topic",
-      "name": "Topics"
+      "name": "Themen"
     },
     {
       "name": "Web(site) Performance",
@@ -69,7 +72,7 @@
       "link": "https://www.scrum.org/user/505228"
     },
     {
-      "name": "Photography"
+      "name": "Fotografie"
     },
     {
       "name": "Turning code into bikes"

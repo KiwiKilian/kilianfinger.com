@@ -1,6 +1,7 @@
 @use 'sass:math';
 
-p {
+address {
+  @include padding-left(4rem);
   @include font-size(1.5rem);
   line-height: math.div(3, 2);
 

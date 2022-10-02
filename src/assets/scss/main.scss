@@ -11,6 +11,7 @@
 @import '4_elements/headings';
 @import '4_elements/hyperlink';
 @import '4_elements/paragraph';
+@import '4_elements/address';
 
 @import '5_objects/container';
 
@@ -20,7 +21,7 @@
 @import '6_components/about';
 @import '6_components/contact';
 @import '6_components/footer';
-@import '6_components/transitioner';
+@import '6_components/text-section';
 @import '6_components/underline-heading';
 @import '6_components/project';
 @import '6_components/projects';
@@ -29,3 +30,5 @@
 @import '6_components/project-attribution';
 @import '6_components/project-back';
 @import '6_components/technologies';
+@import '6_components/home-link';
+@import '6_components/legal';

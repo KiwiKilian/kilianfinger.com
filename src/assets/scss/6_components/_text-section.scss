@@ -1,0 +1,33 @@
+.text-section {
+  @include margin-bottom(3rem);
+
+  @media only screen and (min-width: 664px) {
+    @include margin-bottom(6rem);
+  }
+
+  &__heading {
+    @include font-size(6rem);
+    @include margin-bottom(4rem);
+  }
+
+  &__sub-heading {
+    text-transform: none;
+    @include font-size(3rem);
+    @include margin-bottom(3rem);
+
+    &::before {
+      counter-increment: sub-heading;
+      content: counter(sub-heading) '. ';
+    }
+  }
+
+  &__sub-sub-heading {
+    text-transform: none;
+    @include margin-top(2rem);
+    @include margin-bottom(1rem);
+  }
+}
+
+body {
+  counter-reset: sub-heading;
+}

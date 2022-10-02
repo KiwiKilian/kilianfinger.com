@@ -1,0 +1,29 @@
+.list {
+  padding-left: sizing(2.5);
+  margin-bottom: sizing(1);
+
+  @include breakpoint($main-breakpoint) {
+    margin-bottom: sizing(2);
+  }
+
+  &__item {
+    margin-bottom: sizing(1);
+  }
+
+  &--resume {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .list__item {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-bottom: sizing(0.5);
+      }
+    }
+
+    .list {
+      margin-top: sizing(0.5);
+    }
+  }
+}

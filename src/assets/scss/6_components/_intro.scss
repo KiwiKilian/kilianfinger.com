@@ -44,7 +44,7 @@
   &__title {
     @include font-size(3rem);
 
-    text-transform: lowercase;
+    text-transform: none;
     font-family: 'Silka', sans-serif;
     font-style: italic;
     font-weight: 400;

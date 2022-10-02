@@ -2,7 +2,7 @@
   "technologies": [
     {
       "type": "topic",
-      "name": "Languages"
+      "name": "Sprachen"
     },
     {
       "name": "TypeScript"
@@ -29,7 +29,7 @@
     },
     {
       "type": "topic",
-      "name": "Topics"
+      "name": "Themen"
     },
     {
       "name": "Load Balancing"

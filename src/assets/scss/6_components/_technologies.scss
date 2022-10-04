@@ -23,16 +23,10 @@
       font-weight: 700;
       background-color: var(--blue-black);
       color: white;
-
-      //@media (prefers-color-scheme: dark) {
-      //  background-color: $medium-grey;
-      //  color: $white;
-      //}
     }
   }
 
   &__link {
-    //color: white;
-    text-decoration: underline;
+    @include simple-underline;
   }
 }

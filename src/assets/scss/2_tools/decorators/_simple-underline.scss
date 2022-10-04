@@ -1,0 +1,8 @@
+@mixin simple-underline($color: inherit) {
+  text-decoration: underline dotted;
+  text-decoration-color: $color;
+
+  &:hover {
+    text-decoration-style: solid;
+  }
+}

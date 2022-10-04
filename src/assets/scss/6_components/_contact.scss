@@ -2,4 +2,8 @@
   @include font-size(2rem);
   background-color: var(--blueish-white);
   text-align: center;
+
+  &__mail {
+    @include simple-underline;
+  }
 }

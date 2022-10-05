@@ -1,0 +1,59 @@
+.cookie-button {
+  width: 296px;
+  height: 104px;
+  padding: 28px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  @include rfs(2rem);
+  background-color: var(--blueish-white);
+  color: var(--blue-black);
+  border: 4px solid var(--blue-black);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 664px) {
+    width: 328px;
+    height: 136px;
+    padding: 36px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/cookies.svg');
+    background-size: 24px;
+
+    @media only screen and (min-width: 664px) {
+      background-size: 32px;
+    }
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--blueish-white);
+    z-index: -1;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+
+    @media only screen and (min-width: 664px) {
+      top: 32px;
+      right: 32px;
+      bottom: 32px;
+      left: 32px;
+    }
+  }
+}

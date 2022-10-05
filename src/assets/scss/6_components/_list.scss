@@ -1,6 +1,10 @@
+@use 'sass:math';
+
 .list {
-  @include padding-left(2rem);
+  @include padding-left(4rem);
   @include margin-bottom(1rem);
+  @include font-size(1.5rem);
+  line-height: math.div(3, 2);
 
   @media only screen and (min-width: 664px) {
     @include margin-bottom(2rem);
@@ -8,23 +12,5 @@
 
   &__item {
     @include margin-bottom(1rem);
-
-  }
-
-  &--resume {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    .list__item {
-      margin-bottom: 0;
-
-      &:not(:last-child) {
-        @include margin-bottom(0.5rem);
-      }
-    }
-
-    .list {
-      @include margin-top(0.5rem);
-    }
   }
 }

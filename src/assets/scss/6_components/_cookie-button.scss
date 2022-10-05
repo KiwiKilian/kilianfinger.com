@@ -16,6 +16,7 @@
   border: 4px solid var(--blue-black);
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 
   @media only screen and (min-width: 664px) {
     width: 328px;
@@ -31,7 +32,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('../images/cookies.svg');
+    background: url('../images/cookie.svg');
     background-size: 24px;
 
     @media only screen and (min-width: 664px) {

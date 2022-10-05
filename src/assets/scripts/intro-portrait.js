@@ -1,4 +1,4 @@
-const initializePortrait = () => {
+export const initializePortrait = () => {
   const portraitWrapper = document.querySelector('.js-intro-portrait');
   if (!portraitWrapper) return;
 
@@ -22,5 +22,3 @@ const initializePortrait = () => {
 
   portraitWrapper.addEventListener('click', changePortrait);
 };
-
-export default initializePortrait;

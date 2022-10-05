@@ -4,6 +4,24 @@
   text-align: center;
 
   &__mail {
+    display: inline-block;
     @include simple-underline;
+    @include margin-bottom(2rem);
+  }
+
+  &__social-links {
+    display: flex;
+    @include rfs(0.5rem, gap);
+    justify-content: center;
+  }
+
+  &__social-link {
+    display: block;
+  }
+
+  &__social-link-icon {
+    display: block;
+    @include rfs(4rem, width);
+    color: red;
   }
 }

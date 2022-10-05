@@ -29,4 +29,8 @@
   &__link {
     @include simple-underline;
   }
+
+  &--margin-bottom {
+    @include margin-bottom(2rem);
+  }
 }

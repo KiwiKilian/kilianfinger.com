@@ -4,5 +4,5 @@ a {
 }
 
 p > a {
-  @include simple-underline(var(--yellow))
+  @include simple-underline(var(--yellow));
 }

@@ -1,5 +1,23 @@
 {
   "name": "kilianfinger.com",
+  "author": {
+    "name": "Kilian Finger",
+    "email": "npm@kilianfinger.com",
+    "url": "https://www.kilianfinger.com/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "11ty",
+    "eleventy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KiwiKilian/kilianfinger.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KiwiKilian/kilianfinger.com/issues"
+  },
+  "homepage": "https://github.com/KiwiKilian/kilianfinger.com#readme",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",

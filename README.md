@@ -1,4 +1,6 @@
+<!-- vale off -->
 # [kilianfinger.com](https://www.kilianfinger.com/) 👨🏼‍💻
+<!-- vale on -->
 
 Home of my personal website [kilianfinger.com](https://www.kilianfinger.com/).
 

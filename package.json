@@ -23,6 +23,7 @@
     "build": "eleventy",
     "clean": "rimraf _site",
     "format": "prettier --write **/*.{js,json,scss,yml} !_site",
+    "vale": "npx vale *.md",
     "postinstall": "patch-package"
   },
   "prettier": "@kiwikilian/prettier-config",
@@ -40,7 +41,8 @@
     "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-vite": "2.0.0-canary.2",
-    "@kiwikilian/prettier-config": "^1.0.0",
+    "@kiwikilian/prettier-config": "1.0.1",
+    "@ocular-d/vale-bin": "1.10.36",
     "cheerio": "1.0.0-rc.12",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",

@@ -10,6 +10,10 @@
 /node_modules/
 .npm
 
+# Vale
+.github/styles/*
+!.github/styles/Vocab/Base
+
 # Logs
 logs
 *.log

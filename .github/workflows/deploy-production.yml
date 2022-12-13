@@ -15,7 +15,9 @@ jobs:
   deploy:
     name: Deploy
     needs: build
-    environment: production
+    environment:
+      name: production
+      url: https://www.kilianfinger.com
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3

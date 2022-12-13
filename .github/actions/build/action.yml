@@ -1,0 +1,13 @@
+name: Build
+description: Build the site
+
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/setup
+    - run: npm run build
+      shell: bash
+    - uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: _site

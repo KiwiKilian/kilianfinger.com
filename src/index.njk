@@ -71,15 +71,11 @@ layout: base_layout
         <a class="contact__mail" href="mailto:hey@kilianfinger.com">hey@kilianfinger.com</a>
 
         <div class="contact__social-links">
-            <a class="contact__social-link" title="LinkedIn" href="https://www.linkedin.com/in/kilianfinger/">
-                <img class="contact__social-link-icon" alt="LinkedIn" src="assets/icons/linkedin.svg" />
-            </a>
-            <a class="contact__social-link" title="Twitter" href="https://twitter.com/KiwiKilian">
-                <img class="contact__social-link-icon" alt="Twitter" src="assets/icons/twitter.svg" />
-            </a>
-            <a class="contact__social-link" title="Instagram" href="https://www.instagram.com/KiwiKilian/">
-                <img class="contact__social-link-icon" alt="Instagram" src="assets/icons/instagram.svg" />
-            </a>
+            {% for social in site.socials %}
+                <a class="contact__social-link" title="{{ social.title }}" href="{{ social.url }}">
+                    <img class="contact__social-link-icon" aria-hidden="true" src="assets/icons/{{ social.title | lower }}.svg"/>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </section>

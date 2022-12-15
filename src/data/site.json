@@ -6,5 +6,24 @@
   "url": "https://www.kilianfinger.com",
   "image": "",
   "description": "Kilian Finger ist ein Webentwickler in Salzburg, Österreich.",
-  "themeColor": "#ff5851"
+  "themeColor": "#ff5851",
+
+  "socials": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com/KiwiKilian"
+    },
+    {
+      "title": "Mastodon",
+      "url": "https://fosstodon.org/@KiwiKilian"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kilianfinger/"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/KiwiKilian/"
+    }
+  ]
 }

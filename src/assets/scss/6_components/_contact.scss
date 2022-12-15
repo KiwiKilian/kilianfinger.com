@@ -23,6 +23,5 @@
     display: block;
     @include rfs(4rem, width);
     @include rfs(4rem, height);
-    color: red;
   }
 }

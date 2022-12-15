@@ -72,8 +72,9 @@ layout: base_layout
 
         <div class="contact__social-links">
             {% for social in site.socials %}
-                <a class="contact__social-link" title="{{ social.title }}" href="{{ social.url }}">
-                    <img class="contact__social-link-icon" aria-hidden="true" src="assets/icons/{{ social.title | lower }}.svg"/>
+                <a class="contact__social-link" title="{{ social.title }}" href="{{ social.url }}" rel="me">
+                    <img class="contact__social-link-icon" aria-hidden="true"
+                         src="assets/icons/{{ social.title | lower }}.svg"/>
                 </a>
             {% endfor %}
         </div>

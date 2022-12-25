@@ -13,6 +13,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {
+      build: {
+        assetsInlineLimit: 0,
+      },
+
       resolve: {
         alias: [
           {

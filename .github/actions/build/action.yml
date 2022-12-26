@@ -5,6 +5,9 @@ runs:
   using: composite
   steps:
     - uses: ./.github/actions/setup
+    - uses: actions/cache@v3
+      with:
+        path: _site
     - run: npm run build
       shell: bash
     - uses: actions/upload-artifact@v3

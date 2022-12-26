@@ -1,13 +1,12 @@
 const cheerio = require('cheerio');
-const htmlminifier = require('html-minifier');
+const htmlMinifier = require('html-minifier');
 
-const shouldTransformHTML = (outputPath) =>
-  outputPath && outputPath.endsWith('.html') && process.env.NODE_ENV === 'production';
+const shouldTransformHTML = (outputPath) => outputPath && outputPath.endsWith('.html');
 
 module.exports = {
-  htmlmin: (content, outputPath) =>
-    shouldTransformHTML(outputPath)
-      ? htmlminifier.minify(content, {
+  htmlMinify(content, outputPath) {
+    return shouldTransformHTML(outputPath)
+      ? htmlMinifier.minify(content, {
           html5: true,
           removeComments: true,
           collapseWhitespace: true,
@@ -16,10 +15,11 @@ module.exports = {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
         })
-      : content,
+      : content;
+  },
 
-  safelink: (content, outputPath) => {
-    if (outputPath && outputPath.endsWith('.html')) {
+  externalLinks(content, outputPath) {
+    if (shouldTransformHTML(outputPath)) {
       try {
         const $ = cheerio.load(content);
 

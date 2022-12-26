@@ -1,4 +1,5 @@
 const yaml = require('js-yaml');
+const path = require('path');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 
@@ -15,6 +16,14 @@ module.exports = (eleventyConfig) => {
     viteOptions: {
       build: {
         assetsInlineLimit: 0,
+        rollupOptions: {
+          output: {
+            assetFileNames: (assetInfo) =>
+              ['.jpeg', '.png', '.avif', '.webp'].includes(path.extname(assetInfo.name))
+                ? 'assets/[name].[ext]'
+                : 'assets/[name].[hash].[ext]',
+          },
+        },
       },
 
       resolve: {

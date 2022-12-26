@@ -2,8 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 
+const OUTPUT_DIR = '_site/assets';
+const URL_PATH = '/assets/';
+const FILENAME_FORMAT = (id, src, width, format) => `${path.parse(src).name}@${width}.${id}.${format}`;
+
 module.exports = {
-  image: async ({ src, alt = '', sizeType, class: className = '' }) => {
+  image: async function ({ src, alt = '', sizeType, class: className = '' }) {
     const extension = path.extname(src).slice(1).toLowerCase();
 
     const widths = {
@@ -16,8 +20,9 @@ module.exports = {
     let metadata = await Image('./src/assets/images/' + src, {
       widths,
       formats: ['avif', 'webp', extension],
-      urlPath: '/assets/images/',
-      outputDir: '_site/assets/images/',
+      filenameFormat: FILENAME_FORMAT,
+      urlPath: URL_PATH,
+      outputDir: OUTPUT_DIR,
     });
 
     let imgData = metadata.jpeg ? metadata.jpeg[metadata.jpeg.length - 1] : metadata.png[metadata.png.length - 1];
@@ -25,8 +30,9 @@ module.exports = {
     const lqipMetadata = await Image(`./src/assets/images/${src}`, {
       widths: [16],
       formats: ['webp'],
-      urlPath: '/assets/images/',
-      outputDir: '_site/assets/images/',
+      filenameFormat: FILENAME_FORMAT,
+      urlPath: URL_PATH,
+      outputDir: OUTPUT_DIR,
     });
     const lqipFile = fs.readFileSync(lqipMetadata.webp[0].outputPath);
     const lqipBase64 = `data:image/webp;base64,${new Buffer.from(lqipFile).toString('base64')}`;

@@ -11,7 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Debug
+        run: ls -lah
       - uses: ./.github/actions/build
+      - name: Debug
+        run: ls -lah
   deploy:
     name: Deploy
     needs: build
@@ -23,8 +27,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
-      - name: Debug
-        run: ls -lah
       - uses: easingthemes/ssh-deploy@v3.0.1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

@@ -33,13 +33,13 @@ layout: base_layout
     </div>
 </div>
 
-<section class="projects" id="projekte">
+<section class="projects" id="projects">
     <div class="container container--narrow container--vertical js-projects">
         <h2 class="underline-heading"><span>Projekte</span></h2>
 
         <div class="projects__items">
             {% for project in projects %}
-                <a href="/projekte/{{ project.slug }}/" class="projects__item theme-color--{{ project.slug }}">
+                <a href="/projects/{{ project.slug }}/" class="projects__item theme-color--{{ project.slug }}">
                     <div class="projects__item-image-wrapper">
                         {% image { src: "home/"~project.slug~".png", alt: project.title, class: "projects__item-image", sizeType: "projectsCover" } %}
                     </div>

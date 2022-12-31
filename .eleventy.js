@@ -7,10 +7,11 @@ const filters = require('./utils/filters');
 const shortcodes = require('./utils/shortcodes');
 const transforms = require('./utils/transforms');
 
+/** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
 module.exports = (eleventyConfig) => {
+  eleventyConfig.setServerPassthroughCopyBehavior('copy');
   eleventyConfig.addPassthroughCopy('src/public/!(*.njk)');
   eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.setServerPassthroughCopyBehavior('copy');
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {

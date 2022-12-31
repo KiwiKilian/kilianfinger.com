@@ -16,7 +16,7 @@
   "technologies": [
     {
       "type": "topic",
-      "name": "Sprachen"
+      "name": "Languages"
     },
     {
       "name": "TypeScript"
@@ -58,7 +58,7 @@
     },
     {
       "type": "topic",
-      "name": "Themen"
+      "name": "Topics"
     },
     {
       "name": "Web(site) Performance",
@@ -72,7 +72,7 @@
       "link": "https://www.scrum.org/user/505228"
     },
     {
-      "name": "Fotografie"
+      "name": "Photography"
     },
     {
       "name": "Turning code into bikes"

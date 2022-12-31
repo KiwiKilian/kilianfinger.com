@@ -1,11 +1,15 @@
----
-layout: base_layout
----
+{% extends "base_layout.njk" %}
 
-<div class="legal">
-    <div class="container container--narrow container--vertical">
-        {% include "home_back.njk" %}
+{% block head %}
+    <meta name="robots" content="noindex">
+{% endblock %}
 
-        {{ content | safe }}
+{% block content %}
+    <div class="legal">
+        <div class="container container--narrow container--vertical">
+            {% include "home_back.njk" %}
+
+            {{ content | safe }}
+        </div>
     </div>
-</div>
+{% endblock %}

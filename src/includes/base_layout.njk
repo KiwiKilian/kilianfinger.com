@@ -8,12 +8,13 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    <meta property="og:title" content="{{ title or site.name }}" />
-    <meta property="og:type" content="{{ type or site.type }}" />
-    <meta property="og:url" content="{{ url or site.url }}" />
-    <meta property="og:image" content="{{ image or site.image }}" />
-    <meta property="og:site_name" content="{{ name or site.name }}" />
-    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:title" content="{{ title or site.name }}"/>
+    <meta property="og:type" content="{{ type or site.type }}"/>
+    <meta property="og:url" content="{{ url or site.url }}"/>
+    <meta property="og:image" content="{{ image or site.image }}"/>
+    <meta property="og:site_name" content="{{ name or site.name }}"/>
+    <meta property="og:description" content="{{ description or site.description }}"/>
+    {% block head %}{% endblock %}
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -26,7 +27,9 @@
 <body class="theme-color{% if projectSlug %} theme-color--{{ projectSlug }}{% endif %}">
 
 <main>
-    {{ content | safe }}
+    {% block content %}
+        {{ content | safe }}
+    {% endblock %}
 </main>
 
 {% include 'footer.njk' %}

@@ -4,6 +4,10 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule (.*) https://www.kilianfinger.com%{REQUEST_URI} [L,NE,R=301]
 
+# Redirect index.html and index to /
+RewriteRule ^(|.+/)index\.html$ /$1 [R=301,L]
+RewriteRule ^(|.+/)index$ /$1 [R=301,L]
+
 # Caching
 FileETag MTime Size
 

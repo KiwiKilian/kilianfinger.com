@@ -47,7 +47,7 @@
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-vite": "2.0.0-canary.2",
     "@kiwikilian/prettier-config": "1.0.1",
-    "@ocular-d/vale-bin": "1.10.36",
+    "@ocular-d/vale-bin": "1.10.37",
     "cheerio": "1.0.0-rc.12",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",

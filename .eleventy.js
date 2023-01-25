@@ -1,7 +1,9 @@
-const yaml = require('js-yaml');
+const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
+const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 
 const filters = require('./utils/filters');
 const shortcodes = require('./utils/shortcodes');
@@ -54,10 +56,34 @@ module.exports = (eleventyConfig) => {
     trimBlocks: true,
   });
 
+  eleventyConfig.addNunjucksShortcode('inlineImage', shortcodes.inlineImage);
   eleventyConfig.addNunjucksAsyncShortcode('image', shortcodes.image);
 
+  /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */
+  const eleventyPluginOgImageOptions = {
+    outputDir: '_site/public/og-images',
+
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'Gilroy',
+          data: fs.readFileSync('src/assets/fonts/gilroy/gilroy-extrabold-webfont.woff'),
+          weight: 900,
+          style: 'normal',
+        },
+        {
+          name: 'Silka',
+          data: fs.readFileSync('src/assets/fonts/silka/silka-regular-webfont.woff'),
+          weight: 400,
+          style: 'normal',
+        },
+      ],
+    },
+  };
+  eleventyConfig.addPlugin(EleventyPluginOgImage, eleventyPluginOgImageOptions);
+
   return {
-    dir: { input: 'src', output: '_site', includes: 'includes', data: 'data' },
+    dir: { input: 'src' },
     templateFormats: ['njk'],
     htmlTemplateEngine: 'njk',
   };

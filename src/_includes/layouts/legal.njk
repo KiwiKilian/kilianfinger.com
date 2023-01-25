@@ -1,4 +1,4 @@
-{% extends "base_layout.njk" %}
+{% extends "layouts/base.njk" %}
 
 {% block head %}
     <meta name="robots" content="noindex">
@@ -7,7 +7,7 @@
 {% block content %}
     <div class="legal">
         <div class="container container--narrow container--vertical">
-            {% include "home_back.njk" %}
+            {% include "../home_back.njk" %}
 
             {{ content | safe }}
         </div>

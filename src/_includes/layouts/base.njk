@@ -11,9 +11,12 @@
     <meta property="og:title" content="{{ title or site.name }}"/>
     <meta property="og:type" content="{{ type or site.type }}"/>
     <meta property="og:url" content="{{ url or site.url }}"/>
-    <meta property="og:image" content="{{ image or site.image }}"/>
     <meta property="og:site_name" content="{{ name or site.name }}"/>
     <meta property="og:description" content="{{ description or site.description }}"/>
+    {% if metaImage %}
+        {% ogImage metaImage.path, metaImage.data %}
+    {% endif %}
+
     {% block head %}{% endblock %}
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -32,7 +35,7 @@
     {% endblock %}
 </main>
 
-{% include 'footer.njk' %}
+{% include '../footer.njk' %}
 
 <script async defer type="module" src="{{ '/assets/scripts/index.js' | url }}"></script>
 </body>

@@ -1,12 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
-
 const OUTPUT_DIR = '_site/assets';
 const URL_PATH = '/assets/';
 const FILENAME_FORMAT = (id, src, width, format) => `${path.parse(src).name}@${width}.${id}.${format}`;
 
 module.exports = {
+  inlineImage: function (path) {
+    const file = fs.readFileSync(path);
+
+    return `data:image/jpeg;base64,${file.toString('base64')}`;
+  },
+
   image: async function ({ src, alt = '', sizeType, class: className = '' }) {
     const extension = path.extname(src).slice(1).toLowerCase();
 

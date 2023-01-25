@@ -28,12 +28,15 @@
   },
   "prettier": "@kiwikilian/prettier-config",
   "engines": {
-    "node": "^16.15.0",
-    "npm": "^8.7.0"
+    "node": "18.13.0",
+    "npm": "9.3.1"
   },
   "overrides": {
     "@11ty/eleventy-plugin-vite": {
       "vite": "^4.0.0"
+    },
+    "eleventy-plugin-og-image": {
+      "satori": "0.0.43"
     }
   },
   "dependencies": {
@@ -42,19 +45,20 @@
     "rfs": "9.0.6"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0-canary.33",
+    "@11ty/eleventy": "2.0.0-beta.1",
     "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-vite": "2.0.0-canary.2",
     "@kiwikilian/prettier-config": "1.0.1",
     "@ocular-d/vale-bin": "1.10.37",
     "cheerio": "1.0.0-rc.12",
+    "eleventy-plugin-og-image": "1.4.2",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
-    "outdent": "0.8.0",
     "patch-package": "6.5.1",
     "prettier": "2.8.3",
     "rimraf": "4.1.1",
-    "sass": "1.57.1"
+    "sass": "1.57.1",
+    "vite": "4.0.3"
   }
 }

@@ -1,5 +1,5 @@
 ---
-layout: base_layout
+layout: layouts/base
 ---
 
 <div class="project-intro">
@@ -11,7 +11,7 @@ layout: base_layout
     {{ content | safe }}
 
     <div class="project-details">
-        {% include 'technologies.njk' %}
+        {% include '../technologies.njk' %}
 
         {% if projectAttribution %}
             <div class="project-attribution">

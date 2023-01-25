@@ -11,11 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Debug
-        run: ls -lah
       - uses: ./.github/actions/build
-      - name: Debug
-        run: ls -lah
   deploy:
     name: Deploy
     needs: build

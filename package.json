@@ -39,12 +39,15 @@
   "dependencies": {
     "lazysizes": "5.3.2",
     "party-js": "2.2.0",
+    "prism-themes": "1.9.0",
     "rfs": "9.0.6"
   },
   "devDependencies": {
     "@11ty/eleventy": "2.0.0-beta.2",
     "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-navigation": "0.3.5",
+    "@11ty/eleventy-plugin-rss": "1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "@11ty/eleventy-plugin-vite": "4.0.0",
     "@kiwikilian/prettier-config": "1.0.1",
     "@ocular-d/vale-bin": "1.10.37",
@@ -52,6 +55,7 @@
     "eleventy-plugin-og-image": "1.4.2",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
+    "markdown-it-anchor": "8.6.6",
     "patch-package": "6.5.1",
     "prettier": "2.8.3",
     "rimraf": "4.1.1",

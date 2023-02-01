@@ -4,6 +4,10 @@ const yaml = require('js-yaml');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const EleventyPluginOgImage = require('eleventy-plugin-og-image');
+const EleventyPluginNavigation = require('@11ty/eleventy-navigation');
+const EleventyPluginRss = require('@11ty/eleventy-plugin-rss');
+const EleventyPluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const markdownItAnchor = require('markdown-it-anchor');
 
 const filters = require('./utils/filters');
 const shortcodes = require('./utils/shortcodes');
@@ -81,9 +85,27 @@ module.exports = (eleventyConfig) => {
   };
   eleventyConfig.addPlugin(EleventyPluginOgImage, eleventyPluginOgImageOptions);
 
+  eleventyConfig.addPlugin(EleventyPluginNavigation);
+  eleventyConfig.addPlugin(EleventyPluginRss);
+  eleventyConfig.addPlugin(EleventyPluginSyntaxHighlight);
+
+  eleventyConfig.amendLibrary('md', (mdLib) => {
+    mdLib.use(markdownItAnchor, {
+      // permalink: markdownItAnchor.permalink.ariaHidden({
+      //   placement: "after",
+      //   class: "header-anchor",
+      //   symbol: "#",
+      //   ariaHidden: false,
+      // }),
+      // level: [1,2,3,4],
+      slugify: eleventyConfig.getFilter('slugify'),
+    });
+  });
+
   return {
     dir: { input: 'src' },
-    templateFormats: ['njk'],
+    templateFormats: ['njk', 'md'],
+    markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
   };
 };

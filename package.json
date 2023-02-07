@@ -43,8 +43,8 @@
     "rfs": "9.0.6"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0-beta.2",
-    "@11ty/eleventy-img": "2.0.1",
+    "@11ty/eleventy": "2.0.0-canary.35",
+    "@11ty/eleventy-img": "3.0.0",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
@@ -58,8 +58,8 @@
     "markdown-it-anchor": "8.6.6",
     "patch-package": "6.5.1",
     "prettier": "2.8.3",
-    "rimraf": "4.1.1",
-    "sass": "1.57.1",
+    "rimraf": "4.1.2",
+    "sass": "1.58.0",
     "vite": "4.0.4"
   }
 }

@@ -31,11 +31,6 @@
     "node": "18.13.0",
     "npm": "9.4.0"
   },
-  "overrides": {
-    "eleventy-plugin-og-image": {
-      "satori": "0.0.43"
-    }
-  },
   "dependencies": {
     "lazysizes": "5.3.2",
     "party-js": "2.2.0",

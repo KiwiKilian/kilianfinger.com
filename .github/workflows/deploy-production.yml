@@ -23,7 +23,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
-      - uses: easingthemes/ssh-deploy@v4.0.5
+      - uses: easingthemes/ssh-deploy@v4.1.0
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-avh --delete"

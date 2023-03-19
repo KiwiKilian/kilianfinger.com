@@ -6,7 +6,8 @@ export const initializePortrait = () => {
   let portraitIndex = 0;
 
   const changePortrait = () => {
-    portraitWrapper.classList.remove('is-shaking');
+    if (portraitWrapper.classList.contains('is-shaking')) return;
+
     portraitWrapper.offsetWidth;
     portraitWrapper.classList.add('is-shaking');
     const nextPortraitIndex = (portraitIndex + 1) % 3;
@@ -15,6 +16,7 @@ export const initializePortrait = () => {
     setTimeout(() => {
       portraits[portraitIndex].classList.replace('is-visible', 'is-hidden');
       portraits[nextPortraitIndex].classList.replace('is-loading', 'is-visible');
+      portraitWrapper.classList.remove('is-shaking');
 
       portraitIndex = nextPortraitIndex;
     }, 600);

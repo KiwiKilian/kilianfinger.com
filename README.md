@@ -11,6 +11,3 @@ Build with [eleventy](https://github.com/11ty/eleventy).
 npm install
 npm start
 ```
-
-## Attribution
-- [clenemt/eleventy-webpack](https://github.com/clenemt/eleventy-webpack) for some filters, shortcodes & transforms

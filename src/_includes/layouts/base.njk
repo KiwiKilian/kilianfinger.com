@@ -28,6 +28,19 @@
     <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
 </head>
 <body class="theme-color{% if projectSlug %} theme-color--{{ projectSlug }}{% endif %}">
+<header class="header">
+    <nav class="container header__navigation">
+
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul class="header__navigation-list">
+            {% for page in navPages %}
+                <li class="header__navigation-item">
+                    <a class="header__navigation-link" href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
 
 <main>
     {% block content %}
@@ -38,5 +51,6 @@
 {% include '../footer.njk' %}
 
 <script async defer type="module" src="{{ '/assets/scripts/index.js' | url }}"></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>

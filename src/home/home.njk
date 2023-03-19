@@ -17,7 +17,7 @@ metaImage:
 
             <div class="intro__portrait-wrapper js-intro-portrait">
                 <div class="intro__portrait-canvas">
-                    {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait is-visible", sizeType: "portrait" } %}
+                    {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait is-visible", sizeType: "portrait", loading: "eager", decoding: "sync" } %}
                     {% image { src: "home/kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait is-hidden", sizeType: "portrait" } %}
                     {% image { src: "home/kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait is-hidden", sizeType: "portrait" } %}
                 </div>

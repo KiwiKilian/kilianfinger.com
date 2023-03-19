@@ -32,7 +32,6 @@
     "npm": "9.6.2"
   },
   "dependencies": {
-    "lazysizes": "5.3.2",
     "party-js": "2.2.0",
     "rfs": "9.0.6"
   },

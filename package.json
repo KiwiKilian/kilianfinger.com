@@ -28,8 +28,8 @@
   },
   "prettier": "@kiwikilian/prettier-config",
   "engines": {
-    "node": "18.13.0",
-    "npm": "9.4.0"
+    "node": "18.15.0",
+    "npm": "9.6.2"
   },
   "dependencies": {
     "lazysizes": "5.3.2",

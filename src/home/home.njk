@@ -2,9 +2,9 @@
 layout: layouts/base
 permalink: /
 metaImage:
-    path: './src/home/home.og.njk'
-    data:
-        title: 'Kilian Finger'
+path: './src/home/home.og.njk'
+data:
+title: 'Kilian Finger'
 ---
 
 <section class="boxed">
@@ -63,7 +63,8 @@ metaImage:
         {% include 'technologies.njk' %}
 
         <p>
-            These are technologies I'm fond of ✨. I'm always open to dive into something new. But when starting on a green
+            These are technologies I'm fond of ✨. I'm always open to dive into something new. But when starting on a
+            green
             field, I will focus on these, which allow me to build resilient solutions for you 🦾.
         </p>
     </div>
@@ -76,8 +77,8 @@ metaImage:
 
         <div class="contact__social-links">
             {% for social in site.socials %}
-                <a class="contact__social-link" title="{{ social.title }}" href="{{ social.url }}" rel="me">
-                    <img class="contact__social-link-icon" aria-hidden="true"
+                <a class="contact__social-link" href="{{ social.url }}" rel="me">
+                    <img class="contact__social-link-icon" alt="{{ social.title }}"
                          src="assets/icons/{{ social.title | lower }}.svg"/>
                 </a>
             {% endfor %}

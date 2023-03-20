@@ -5,12 +5,12 @@ eleventyNavigation:
     key: Home
     order: 0
 metaImage:
-    path: './src/home/home.og.njk'
-    data:
-        title: 'Kilian Finger'
+path: './src/home/home.og.njk'
+data:
+title: 'Kilian Finger'
 ---
 
-<div class="boxed">
+<section class="boxed">
     <div class="container">
         <div class="intro">
             <div class="intro__text">
@@ -20,16 +20,16 @@ metaImage:
 
             <div class="intro__portrait-wrapper js-intro-portrait">
                 <div class="intro__portrait-canvas">
-                    {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait is-visible", sizeType: "portrait" } %}
+                    {% image { src: "home/kilian_2.jpeg", alt: "Kilian Finger", class: "intro__portrait is-visible", sizeType: "portrait", loading: "eager", decoding: "sync" } %}
                     {% image { src: "home/kilian_1.jpeg", alt: "Kilian Finger", class: "intro__portrait is-hidden", sizeType: "portrait" } %}
                     {% image { src: "home/kilian_3.jpeg", alt: "Kilian Finger", class: "intro__portrait is-hidden", sizeType: "portrait" } %}
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="about">
+<section class="about">
     <div class="container container--narrow container--vertical">
         <h3 class="h2">Hey there! 👋</h3>
         <p>I'm Kilian 👨🏼‍💻, a web developer currently based at the foot of the alps in Salzburg, Austria 🇦🇹. I got
@@ -38,7 +38,7 @@ metaImage:
             a Master in MultiMediaTechnology in Salzburg. Currently I'm trying to help you choose sustainable mobility
             options 🚲 and solve geospatial problems 🗺 at <a href="https://www.trafficon.eu/">Trafficon</a>.
     </div>
-</div>
+</section>
 
 <section class="projects" id="projects">
     <div class="container container--narrow container--vertical js-projects">
@@ -66,7 +66,8 @@ metaImage:
         {% include 'technologies.njk' %}
 
         <p>
-            These are technologies I'm fond of ✨. I'm always open to dive into something new. But when starting on a green
+            These are technologies I'm fond of ✨. I'm always open to dive into something new. But when starting on a
+            green
             field, I will focus on these, which allow me to build resilient solutions for you 🦾.
         </p>
     </div>
@@ -79,8 +80,8 @@ metaImage:
 
         <div class="contact__social-links">
             {% for social in site.socials %}
-                <a class="contact__social-link" title="{{ social.title }}" href="{{ social.url }}" rel="me">
-                    <img class="contact__social-link-icon" aria-hidden="true"
+                <a class="contact__social-link" href="{{ social.url }}" rel="me">
+                    <img class="contact__social-link-icon" alt="{{ social.title }}"
                          src="assets/icons/{{ social.title | lower }}.svg"/>
                 </a>
             {% endfor %}

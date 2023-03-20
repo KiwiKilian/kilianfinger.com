@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 
 <div class="project-intro">
-    {% image { src: "projects/"~projectSlug~".png", alt: title, class: "project-intro__image", sizeType: "projectsMockup" } %}
+    {% image { src: "projects/"~projectSlug~".png", alt: title, class: "project-intro__image", sizeType: "projectsMockup", loading: "eager", decoding: "sync" } %}
     <h1 class="project-intro__heading">{{ title }}</h1>
 </div>
 

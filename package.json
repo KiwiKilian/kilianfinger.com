@@ -28,11 +28,10 @@
   },
   "prettier": "@kiwikilian/prettier-config",
   "engines": {
-    "node": "18.13.0",
-    "npm": "9.4.0"
+    "node": "18.15.0",
+    "npm": "9.6.2"
   },
   "dependencies": {
-    "lazysizes": "5.3.2",
     "party-js": "2.2.0",
     "prism-themes": "1.9.0",
     "rfs": "9.0.6"
@@ -45,16 +44,16 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "@11ty/eleventy-plugin-vite": "4.0.0",
     "@kiwikilian/prettier-config": "1.0.1",
-    "@ocular-d/vale-bin": "1.10.37",
+    "@ocular-d/vale-bin": "1.10.40",
     "cheerio": "1.0.0-rc.12",
-    "eleventy-plugin-og-image": "1.4.2",
+    "eleventy-plugin-og-image": "1.6.1",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
     "markdown-it-anchor": "8.6.6",
     "patch-package": "6.5.1",
-    "prettier": "2.8.4",
-    "rimraf": "4.1.2",
-    "sass": "1.58.0",
+    "prettier": "2.8.5",
+    "rimraf": "4.4.0",
+    "sass": "1.59.3",
     "vite": "4.1.1"
   }
 }

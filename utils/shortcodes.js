@@ -49,15 +49,15 @@ module.exports = {
                   .map(
                     (formatMetadata) =>
                       `<source 
-                          type="${formatMetadata[0].sourceType}"
-                          srcset="${formatMetadata.map(({ srcset }) => srcset).join(', ')}"
+                         type="${formatMetadata[0].sourceType}"
+                         srcset="${formatMetadata.map(({ srcset }) => srcset).join(', ')}"
+                         sizes="${sizes}"
                        >`,
                   )
                   .join('')}
                 <img
                   class="${className}"
                   src="${imgData.url}"
-                  sizes="${sizes}"
                   width="${imgData.width}"
                   height="${imgData.height}"
                   loading="${loading}"

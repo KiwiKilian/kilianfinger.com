@@ -78,8 +78,7 @@ title: 'Kilian Finger'
         <div class="contact__social-links">
             {% for social in site.socials %}
                 <a class="contact__social-link" href="{{ social.url }}" rel="me">
-                    <img class="contact__social-link-icon"
-                            {# alt="{{ social.title }}" #}
+                    <img class="contact__social-link-icon" alt="{{ social.title }}"
                          src="assets/icons/{{ social.title | lower }}.svg"/>
                 </a>
             {% endfor %}

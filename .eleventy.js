@@ -21,6 +21,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {
       build: {
+        polyfillModulePreload: false,
         assetsInlineLimit: 0,
         rollupOptions: {
           output: {

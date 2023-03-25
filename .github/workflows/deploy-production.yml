@@ -12,9 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/build
+  validate-html:
+    name: Validate HTML
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+      - uses: ./.github/actions/validate-html
   deploy:
     name: Deploy
-    needs: build
+    needs: validate-html
     environment:
       name: production
       url: https://www.kilianfinger.com

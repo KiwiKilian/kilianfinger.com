@@ -17,6 +17,7 @@ const transforms = require('./utils/transforms');
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('src/public/!(*.njk)');
   eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy('src/**/*.js');
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {
@@ -89,6 +90,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginNavigation);
   eleventyConfig.addPlugin(EleventyPluginRss);
   eleventyConfig.addPlugin(EleventyPluginSyntaxHighlight);
+  eleventyConfig.addPlugin(require('./.eleventy.drafts.js'));
 
   eleventyConfig.amendLibrary('md', (mdLib) => {
     mdLib.use(markdownItAnchor, {

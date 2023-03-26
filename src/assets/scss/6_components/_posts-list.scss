@@ -1,0 +1,28 @@
+.posts-list {
+  list-style: none;
+
+  &__item {
+    position: relative;
+    @include padding(4rem);
+
+    &:focus-within, &:hover {
+      .posts-list__link::before {
+        @include rfs(0.5rem, border-width);
+        border-style: solid;
+        border-color: var(--red);
+      }
+    }
+  }
+
+  &__link {
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+}

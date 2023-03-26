@@ -1,7 +1,8 @@
 ---
 title: Wrapping your Head around Eleventy with Vite
-description: ...
+description: Benefits of using Vite for bundling your assets for your Eleventy Site.
 date: 2023-02-01
+draft: true
 ---
 
 This is just an example.

@@ -32,6 +32,7 @@
     "npm": "9.6.2"
   },
   "dependencies": {
+    "maplibre-gl": "2.4.0",
     "party-js": "2.2.0",
     "prism-themes": "1.9.0",
     "rfs": "9.0.6"

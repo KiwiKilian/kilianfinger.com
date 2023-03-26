@@ -11,13 +11,19 @@ eleventyImport:
 {% block content %}
     <section class="section">
         <div class="container container--vertical">
-            <ul>
-                {% for post in collections.posts %}
-                    <li>
-                        <a href="{{ post.url }}">{{ post.date }} {{ post.data.title }}</a>
+            <ol class="posts-list">
+                {% for post in collections.posts | reverse %}
+                    <li class="posts-list__item">
+                        <article class="posts-list__article">
+                            <h2 class="posts-list__title">
+                                <a class="posts-list__link" href="{{ post.url }}">{{ post.data.title }}</a>
+                            </h2>
+                            <time class="posts-list__date" datetime="{{ post.date | htmlDate }} ">{{ post.date | readableDate }} </time>
+                            <p class="posts-list__description">{{ post.data.description }}</p>
+                        </article>
                     </li>
                 {% endfor %}
-            </ul>
+            </ol>
         </div>
     </section>
 {% endblock %}

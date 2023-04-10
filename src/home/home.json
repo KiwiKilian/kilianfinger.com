@@ -1,4 +1,10 @@
 {
+  "layout": "layouts/base",
+  "permalink": "/",
+  "metaImage": {
+    "path": "./src/home/home.og.njk",
+    "data": {"title": "Kilian Finger"}
+  },
   "projects": [
     {
       "slug": "radlkarte-salzburg",

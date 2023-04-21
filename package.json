@@ -28,8 +28,8 @@
   },
   "prettier": "@kiwikilian/prettier-config",
   "engines": {
-    "node": "18.15.0",
-    "npm": "9.6.2"
+    "node": "18.16.0",
+    "npm": "9.6.5"
   },
   "dependencies": {
     "party-js": "2.2.0",

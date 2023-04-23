@@ -1,5 +1,19 @@
 {
+  "layout": "layouts/base",
+  "permalink": "/",
+  "eleventyNavigation": {
+    "key": "Home",
+    "order": 0
+  },
+  "metaImage": {
+    "path": "./src/home/home.og.njk",
+    "data": {"title": "Kilian Finger"}
+  },
   "projects": [
+    {
+      "slug": "radroutenplaner-hessen",
+      "title": "Radrountenplaner Hessen"
+    },
     {
       "slug": "radlkarte-salzburg",
       "title": "Radlkarte Salzburg"
@@ -36,6 +50,9 @@
     },
     {
       "name": "React Native"
+    },
+    {
+      "name": "Expo"
     },
     {
       "name": "NestJS"

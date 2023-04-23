@@ -17,7 +17,7 @@ module.exports = {
 
     const { widths, sizes } = {
       portrait: {
-        widths: [256, 560, 810, 992, 1120],
+        widths: [256, 560, 890, 1120],
         sizes: '(min-width: 2060px) 560px, (min-width: 680px) calc(23.09vw + 89px), 65vw',
       },
       projectsCover: {
@@ -42,24 +42,27 @@ module.exports = {
       outputDir: OUTPUT_DIR,
     });
 
-    let imgData = metadata.jpeg ? metadata.jpeg[metadata.jpeg.length - 1] : metadata.png[metadata.png.length - 1];
+    let imgData = metadata.jpeg || metadata.png;
 
     return `<picture>
-                ${Object.values(metadata)
-                  .map(
-                    (formatMetadata) =>
-                      `<source 
-                         type="${formatMetadata[0].sourceType}"
-                         srcset="${formatMetadata.map(({ srcset }) => srcset).join(', ')}"
-                         sizes="${sizes}"
-                       >`,
-                  )
-                  .join('')}
+              ${Object.values(metadata)
+                .filter((formatMetadata) => !['image/jpeg', 'image/png'].includes(formatMetadata[0].sourceType))
+                .map(
+                  (formatMetadata) =>
+                    `<source 
+                       type="${formatMetadata[0].sourceType}"
+                       srcset="${formatMetadata.map(({ srcset }) => srcset).join(', ')}"
+                       sizes="${sizes}"
+                     >`,
+                )
+                .join('')}
                 <img
                   class="${className}"
-                  src="${imgData.url}"
-                  width="${imgData.width}"
-                  height="${imgData.height}"
+                  src="${imgData[imgData.length - 1].url}"
+                  srcset="${imgData.map(({ srcset }) => srcset).join(', ')}"
+                  sizes="${sizes}"
+                  width="${imgData[imgData.length - 1].width}"
+                  height="${imgData[imgData.length - 1].height}"
                   loading="${loading}"
                   decoding="${decoding}"
                   alt="${alt}" 

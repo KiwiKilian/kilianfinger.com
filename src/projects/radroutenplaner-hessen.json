@@ -1,0 +1,65 @@
+{
+  "technologies": [
+    {
+      "type": "topic",
+      "name": "Languages"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "type": "topic",
+      "name": "Frameworks"
+    },
+    {
+      "name": "React Native"
+    },
+    {
+      "name": "Expo"
+    },
+    {
+      "name": "NestJS"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "GitLab CI & CD"
+    },
+    {
+      "name": "EAS"
+    },
+    {
+      "name": "OpenAPI Clients"
+    },
+    {
+      "type": "topic",
+      "name": "Topics"
+    },
+    {
+      "name": "Geodata"
+    },
+    {
+      "name": "Mapbox"
+    },
+    {
+      "name": "MapLibre"
+    },
+    {
+      "name": "Open Source Contributions"
+    },
+    {
+      "type": "topic",
+      "name": "Download"
+    },
+    {
+      "name": "Android",
+      "link": "https://play.google.com/store/apps/details?id=eu.trafficon.rrphessen.view"
+    },
+    {
+      "name": "iOS",
+      "link": "https://apps.apple.com/de/app/radroutenplaner-hessen/id890403648"
+    }
+  ]
+}

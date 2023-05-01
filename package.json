@@ -40,7 +40,7 @@
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-vite": "4.0.0",
     "@kiwikilian/prettier-config": "1.0.1",
-    "@ocular-d/vale-bin": "1.10.43",
+    "@ocular-d/vale-bin": "1.10.46",
     "cheerio": "1.0.0-rc.12",
     "eleventy-plugin-og-image": "1.6.1",
     "html-minifier": "4.0.0",

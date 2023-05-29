@@ -5,7 +5,7 @@
 
   &__mail {
     display: inline-block;
-    @include simple-underline;
+    @include underline-dotted;
     @include margin-bottom(2rem);
   }
 

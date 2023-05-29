@@ -1,6 +1,24 @@
 .underline-heading {
   @extend .h1;
   display: inline-block;
-  @include underline;
   @include margin-bottom(2rem);
+
+  span {
+    position: relative;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 90%;
+      width: 104%;
+      background-color: var(--yellow);
+      bottom: 10%;
+      left: -2%;
+      z-index: -1;
+      transform: scaleY(0.2);
+      transition: transform 300ms ease;
+      transform-origin: 50% 100%;
+    }
+  }
 }

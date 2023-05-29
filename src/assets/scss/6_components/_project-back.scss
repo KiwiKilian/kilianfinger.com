@@ -4,10 +4,10 @@
   justify-content: center;
 
   &__link {
-    @include underline(true);
     @include font-size(2rem);
     font-family: 'Gilroy', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
+    @include underline-dotted(var(--yellow), true);
   }
 }

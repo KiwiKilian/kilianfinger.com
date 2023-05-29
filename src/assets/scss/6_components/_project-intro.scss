@@ -2,7 +2,8 @@
   @include padding(4rem);
   @include padding(4rem);
   background-color: var(--theme-color);
-  color: white;
+  color: var(--theme-color-text);
+
 
   &__image {
     @include margin-bottom(2rem);

@@ -1,0 +1,10 @@
+.post-header {
+  @include margin-bottom(2rem);
+
+  &__sub-title {
+    @include font-size(2rem);
+    text-transform: none;
+    font-family: 'Silka', sans-serif;
+    font-weight: 400;
+  }
+}

@@ -1,11 +1,11 @@
 ---
 permalink: blog/{{ title | slugify }}/
 eleventyComputed:
-  metaImage:
-    path: ./src/blog/posts/post.og.njk
-    data:
-      title: "{{ title }}"
-      date: "{{ date | readableDate }}"
+metaImage:
+path: ./src/blog/posts/post.og.njk
+data:
+title: "{{ title }}"
+date: "{{ date | readableDate }}"
 ---
 {% extends "layouts/base.njk" %}
 
@@ -13,9 +13,12 @@ eleventyComputed:
 
 {% block content %}
     <article class="container container--narrow container--vertical">
-        <header>
+        <header class="post-header">
             <time datetime="{{ date | htmlDate }}">{{ date | readableDate }}</time>
             <h1>{{ title }}</h1>
+            {% if subTitle %}
+                <h2 class="post-header__sub-title">{{ subTitle }}</h2>
+            {% endif %}
         </header>
 
         {{ content | safe }}

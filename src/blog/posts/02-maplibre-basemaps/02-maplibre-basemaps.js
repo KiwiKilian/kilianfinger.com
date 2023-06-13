@@ -14,8 +14,7 @@ const mapOverview = new maplibregl.Map({
   container: 'map-overview',
   style: 'https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_top.json',
   cooperativeGestures: true,
-  center: [10.447683333333, 51.163361111111],
-  zoom: 4,
+  bounds: [5.8, 47.2, 15.1, 55.1],
 });
 
 mapOverview.once('load', styleImprovements);

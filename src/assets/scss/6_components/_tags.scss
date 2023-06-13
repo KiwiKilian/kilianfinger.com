@@ -1,4 +1,4 @@
-.technologies {
+.tags {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -22,12 +22,12 @@
     &--topic {
       font-weight: 700;
       background-color: var(--blue-black);
-      color: white;
+      color: var(--blueish-white);
     }
   }
 
   &__link {
-    @include simple-underline;
+    @include underline-dotted;
   }
 
   &--margin-bottom {

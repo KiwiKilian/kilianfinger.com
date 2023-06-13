@@ -3,8 +3,7 @@
 
 @import '~rfs/scss';
 
-@import '2_tools/decorators/underline';
-@import '2_tools/decorators/simple-underline';
+@import '2_tools/decorators/underline-dotted';
 
 @import '3_generic/reset';
 
@@ -31,7 +30,7 @@
 @import '6_components/project-details';
 @import '6_components/project-attribution';
 @import '6_components/project-back';
-@import '6_components/technologies';
+@import '6_components/tags';
 @import '6_components/home-back';
 @import '6_components/legal';
 @import '6_components/list';

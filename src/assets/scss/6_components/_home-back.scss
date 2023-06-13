@@ -1,9 +1,9 @@
 .home-back {
-  @include underline(true);
   @include font-size(1.5rem);
   @include margin-bottom(2rem);
   display: inline-block;
   font-family: 'Gilroy', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  @include underline-dotted(var(--yellow), true);
 }

@@ -1,4 +1,5 @@
 .footer {
+  color: var(--theme-color-text);
   background-color: var(--theme-color);
 
   &__marple-image {
@@ -15,8 +16,6 @@
   }
 
   &__content {
-    @include font-size(2rem);
-    color: white;
     display: flex;
     justify-content: space-between;
   }
@@ -37,34 +36,11 @@
   }
 
   &__link {
-    @include underline(true);
-    color: var(--blue-black);
-    text-decoration: none;
+    @include font-size(2rem);
+    @include underline-dotted(var(--yellow));
+    color: var(--theme-color-text);
     font-family: 'Gilroy', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-  }
-}
-
-@keyframes shake-vertical {
-  10%,
-  90% {
-    transform: translate3d(-2px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(3px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-8px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(8px, 0, 0);
   }
 }

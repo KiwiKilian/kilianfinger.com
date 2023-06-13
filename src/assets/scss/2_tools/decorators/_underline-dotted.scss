@@ -1,0 +1,21 @@
+@mixin underline-dotted($color: inherit, $span: false) {
+  @if $span {
+    span {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: $color;
+    }
+
+    &:hover span {
+      text-decoration-style: solid;
+    }
+  } @else {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: $color;
+
+    &:hover {
+      text-decoration-style: solid;
+    }
+  }
+}

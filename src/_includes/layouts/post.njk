@@ -1,11 +1,5 @@
 ---
 permalink: blog/{{ title | slugify }}/
-eleventyComputed:
-metaImage:
-path: ./src/blog/posts/post.og.njk
-data:
-title: "{{ title }}"
-date: "{{ date | readableDate }}"
 ---
 {% extends "layouts/base.njk" %}
 

@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+ol, ul {
+  @include padding-left(6rem);
+
+  &:not(:last-child) {
+    @include margin-bottom(2rem);
+  }
+}
+
+li {
+  @include font-size(1.5rem);
+  line-height: math.div(3, 2);
+}

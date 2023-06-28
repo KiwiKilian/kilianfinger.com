@@ -15,7 +15,9 @@ permalink: blog/{{ title | slugify }}/
             {% endif %}
         </header>
 
-        {{ content | safe }}
+        <main class="post-content">
+            {{ content | safe }}
+        </main>
     </article>
 {% endblock %}
 

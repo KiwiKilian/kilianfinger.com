@@ -1,0 +1,12 @@
+.post-content {
+
+  code:not([class]):not(pre>code) {
+    color: white;
+    background-color: var(--blue-black);
+    padding: 0.2rem 0.4rem;
+    margin: 0;
+    font-size: 85%;
+    white-space: break-spaces;
+    border-radius: 6px;
+  }
+}

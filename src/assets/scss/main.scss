@@ -10,6 +10,7 @@
 @import '4_elements/body';
 @import '4_elements/headings';
 @import '4_elements/hyperlink';
+@import '4_elements/lists';
 @import '4_elements/paragraph';
 @import '4_elements/address';
 
@@ -38,5 +39,6 @@
 
 // Blog
 @import '6_components/post-header';
+@import '6_components/post-content';
 @import '6_components/posts-list';
 

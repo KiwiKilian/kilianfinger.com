@@ -6,7 +6,7 @@ const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 const EleventyPluginNavigation = require('@11ty/eleventy-navigation');
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss');
-const EleventyPluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const shikiTwoslash = require('eleventy-plugin-shiki-twoslash');
 const markdownItAnchor = require('markdown-it-anchor');
 
 const filters = require('./utils/filters');
@@ -90,7 +90,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(EleventyPluginNavigation);
   eleventyConfig.addPlugin(EleventyPluginRss);
-  eleventyConfig.addPlugin(EleventyPluginSyntaxHighlight);
+  eleventyConfig.addPlugin(shikiTwoslash, {
+    themes: ['../../../src/assets/shiki/OneDark-Pro'],
+    theme: 'One Dark Pro',
+  });
   eleventyConfig.addPlugin(require('./.eleventy.drafts.js'));
 
   eleventyConfig.amendLibrary('md', (mdLib) => {

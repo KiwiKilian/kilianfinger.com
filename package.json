@@ -42,12 +42,12 @@
     "@kiwikilian/prettier-config": "1.0.1",
     "@ocular-d/vale-bin": "1.10.49",
     "cheerio": "1.0.0-rc.12",
-    "eleventy-plugin-og-image": "2.0.0",
+    "eleventy-plugin-og-image": "2.0.1",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
     "prettier": "2.8.8",
     "rimraf": "5.0.1",
-    "sass": "1.63.3",
+    "sass": "1.63.6",
     "vite": "4.3.9"
   }
 }

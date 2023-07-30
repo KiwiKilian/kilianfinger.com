@@ -24,10 +24,12 @@ of my very first open source project. It allows to create OG images from HTML (o
 Eleventy) and CSS. Instead of using a headless browser, `satori` is used to transform your HTML to SVG allowing a simple
 rendering to bitmap afterward.
 
-```
+<pre style="text-align: center;">
+<code>
 ┌─────────────┐             ┌─────────────┐
 │  Template   │──Eleventy──▶│    HTML     │
 └─────────────┘             └─────────────┘
+                                   │       
                                    │       
                                 satori     
                                    │       
@@ -35,7 +37,8 @@ rendering to bitmap afterward.
 ┌─────────────┐             ┌─────────────┐
 │   Bitmap    │◀──resvg-js──│     SVG     │
 └─────────────┘             └─────────────┘
-```
+</code>
+</pre>
 
 
 Happy to hear you feedback 

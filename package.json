@@ -45,7 +45,7 @@
     "eleventy-plugin-og-image": "2.0.1",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "rimraf": "5.0.1",
     "sass": "1.65.1",
     "vite": "4.4.9"

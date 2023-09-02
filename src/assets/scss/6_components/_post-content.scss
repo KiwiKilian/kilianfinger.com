@@ -1,6 +1,7 @@
-.post-content {
+@use 'sass:math';
 
-  code:not([class]):not(pre>code) {
+.post-content {
+  code:not([class]):not(pre > code) {
     color: white;
     background-color: var(--blue-black);
     padding: 0.2rem 0.4rem;
@@ -8,5 +9,19 @@
     font-size: 85%;
     white-space: break-spaces;
     border-radius: 6px;
+  }
+
+  ol,
+  ul {
+    @include padding-left(6rem);
+
+    &:not(:last-child) {
+      @include margin-bottom(2rem);
+    }
+  }
+
+  li {
+    @include font-size(1.5rem);
+    line-height: math.div(3, 2);
   }
 }

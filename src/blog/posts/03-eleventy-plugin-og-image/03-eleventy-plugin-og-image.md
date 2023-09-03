@@ -3,6 +3,7 @@ title: Generating OG Images in Eleventy
 subTitle: Using HTML and CSS without harming a headless browser
 description: ...
 date: 2023-03-20
+draft: true
 ---
 
 Open Graph (OG) Images represent your content on the web when being shared. They are those little preview images

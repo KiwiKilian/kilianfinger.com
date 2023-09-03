@@ -1,14 +1,15 @@
 .boxed {
   @include rfs(4rem, padding-top);
   @include rfs(4rem, padding-bottom);
-  @include rfs(2rem, border-width);
   border-style: solid;
   border-color: white;
   background-color: var(--blueish-white);
   display: flex;
   position: relative;
   z-index: 1;
-  border-top-width: 0;
+  border-left-width: max(calc(env(safe-area-inset-left, 0) + 1rem), rfs-value-min(2rem));
+  border-right-width: max(calc(env(safe-area-inset-right, 0) + 1rem), rfs-value-min(2rem));
+  @include rfs(2rem, border-bottom-width);
 
   @media only screen and (min-width: 664px) {
     @include rfs(8rem, padding-top);

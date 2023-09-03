@@ -1,0 +1,11 @@
+@use '~rfs/scss' as rfs;
+
+@function rfs-value-min($value) {
+  $rfs-val: rfs.rfs-value($value);
+  $rfs-fluid-val: rfs.rfs-fluid-value($value);
+
+  @if $rfs-val == $rfs-fluid-val {
+    @return $rfs-val;
+  }
+  @return min($rfs-val, $rfs-fluid-val);
+}

@@ -3,6 +3,7 @@
 
 @import '~rfs/scss';
 
+@import '2_tools/rfs-min-value';
 @import '2_tools/decorators/underline-dotted';
 
 @import '3_generic/reset';
@@ -40,4 +41,3 @@
 @import '6_components/post-header';
 @import '6_components/post-content';
 @import '6_components/posts-list';
-

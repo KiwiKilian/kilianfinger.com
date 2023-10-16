@@ -42,7 +42,7 @@
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-vite": "4.0.0",
     "@kiwikilian/prettier-config": "1.0.1",
-    "@ocular-d/vale-bin": "2.28.2",
+    "@ocular-d/vale-bin": "2.29.5",
     "cheerio": "1.0.0-rc.12",
     "eleventy-plugin-og-image": "2.0.1",
     "eleventy-plugin-shiki-twoslash": "1.1.3",

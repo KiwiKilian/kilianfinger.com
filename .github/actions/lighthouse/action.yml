@@ -10,7 +10,7 @@ runs:
   steps:
     - uses: ./.github/actions/setup-node
     - run: |
-        npm install -g @lhci/cli@0.12.x
+        npm install -g @lhci/cli
         lhci autorun
       shell: bash
       env:

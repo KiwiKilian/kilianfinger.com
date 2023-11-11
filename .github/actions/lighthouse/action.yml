@@ -1,5 +1,9 @@
 name: Lighthouse CI
 description: Check Lighthouse scores
+inputs:
+  LHCI_GITHUB_APP_TOKEN:
+    description: "Token from Lighthouse CI GitHub App"
+    required: true
 
 runs:
   using: composite
@@ -10,4 +14,4 @@ runs:
         lhci autorun
       shell: bash
       env:
-        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        LHCI_GITHUB_APP_TOKEN: ${{ inputs.LHCI_GITHUB_APP_TOKEN }}

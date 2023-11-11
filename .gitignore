@@ -1,6 +1,7 @@
 # Build results
 /_site/
 /.cache/
+/.lighthouseci/
 
 # IDEs
 /.idea/

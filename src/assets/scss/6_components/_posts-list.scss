@@ -1,15 +1,23 @@
 .posts-list {
   list-style: none;
+  padding: 0;
 
   &__item {
     position: relative;
-    @include padding(4rem);
+    padding-left: 0;
+    padding-right: 0;
+    @include padding(2rem);
 
-    &:focus-within, &:hover {
+    @media only screen and (min-width: 664px) {
+      @include padding(4rem);
+    }
+
+    &:focus-within,
+    &:hover {
       .posts-list__link::before {
         @include rfs(0.5rem, border-width);
         border-style: solid;
-        border-color: var(--red);
+        border-color: var(--yellow);
       }
     }
   }
@@ -20,7 +28,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
     }

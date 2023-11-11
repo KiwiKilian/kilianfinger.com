@@ -12,19 +12,23 @@
   "projects": [
     {
       "slug": "radroutenplaner-hessen",
-      "title": "Radrountenplaner Hessen"
+      "title": "Radrountenplaner Hessen",
+      "alt": "Frankfurter Skyline"
     },
     {
       "slug": "radlkarte-salzburg",
-      "title": "Radlkarte Salzburg"
+      "title": "Radlkarte Salzburg",
+      "alt": "Fahrrad auf dem Müllnersteg vor dem Salzburger Panorama"
     },
     {
       "slug": "cologne-marathon",
-      "title": "Cologne Marathon"
+      "title": "Cologne Marathon",
+      "alt": "Viele Marathonläufer kommen aus einer Unterführung"
     },
     {
       "slug": "flexpowerhub",
-      "title": "FlexPowerHub"
+      "title": "FlexPowerHub",
+      "alt": "Windräder auf einer Wiese"
     }
   ],
   "tags": [

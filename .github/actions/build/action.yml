@@ -4,7 +4,8 @@ description: Build the site
 runs:
   using: composite
   steps:
-    - uses: ./.github/actions/setup
+    - uses: ./.github/actions/setup-node
+    - uses: ./.github/actions/install
     - uses: actions/cache@v3
       with:
         key: build

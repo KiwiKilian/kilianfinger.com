@@ -1,0 +1,13 @@
+name: Lighthouse CI
+description: Check Lighthouse scores
+
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/setup-node
+    - run: |
+        npm install -g @lhci/cli@0.12.x
+        lhci autorun
+      shell: bash
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

@@ -1,5 +1,5 @@
-name: Setup
-description: Install dependencies
+name: Setup Node
+description: Setup Node.js version from .nvmrc
 
 runs:
   using: composite
@@ -8,5 +8,3 @@ runs:
       with:
         cache: npm
         node-version-file: '.nvmrc'
-    - run: npm ci
-      shell: bash

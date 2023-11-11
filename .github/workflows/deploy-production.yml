@@ -16,6 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build
+  lighthouse:
+    name: Lighthouse CI
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+      - uses: ./.github/actions/validate-html
   validate-html:
     name: Validate HTML
     needs: build
@@ -28,7 +38,9 @@ jobs:
       - uses: ./.github/actions/validate-html
   deploy:
     name: Deploy
-    needs: validate-html
+    needs:
+      - lighthouse
+      - validate-html
     environment:
       name: production
       url: https://www.kilianfinger.com

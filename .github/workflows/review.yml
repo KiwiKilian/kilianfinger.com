@@ -21,6 +21,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
+          path: _site
       - uses: ./.github/actions/lighthouse
         with:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
@@ -33,4 +34,5 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
+          path: _site
       - uses: ./.github/actions/validate-html

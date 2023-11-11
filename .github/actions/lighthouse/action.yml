@@ -9,8 +9,6 @@ runs:
   using: composite
   steps:
     - uses: ./.github/actions/setup-node
-    - run: ls -la
-      shell: bash
     - run: |
         npm install -g @lhci/cli
         lhci autorun

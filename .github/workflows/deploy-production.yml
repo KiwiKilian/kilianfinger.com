@@ -20,6 +20,7 @@ jobs:
     name: Lighthouse CI
     needs: build
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3

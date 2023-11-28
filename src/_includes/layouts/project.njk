@@ -3,7 +3,15 @@ layout: layouts/base
 ---
 
 <div class="project-intro">
-    {% image { src: "projects/"~projectSlug~".png", alt: title, class: "project-intro__image", sizeType: "projectsMockup", loading: "eager", decoding: "sync" } %}
+    {% image {
+        src: "projects/"~projectSlug~".png",
+        alt: title, class: "project-intro__image",
+        sizeType: "custom",
+        widths: [256, 810, 1120, 1360, 1560, 1740, 1900, 2048],
+        sizes: "calc(97.52vw - 54px)",
+        loading: "eager",
+        decoding: "sync"
+    } %}
     <h1 class="project-intro__heading">{{ title }}</h1>
 </div>
 

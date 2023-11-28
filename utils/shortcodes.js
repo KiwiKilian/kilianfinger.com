@@ -12,7 +12,16 @@ module.exports = {
     return `data:image/jpeg;base64,${file.toString('base64')}`;
   },
 
-  image: async function ({ src, alt = '', sizeType, class: className = '', loading = 'lazy', decoding = 'async' }) {
+  image: async function ({
+    src,
+    alt = '',
+    sizeType = 'custom',
+    widths: customWidths,
+    sizes: customSizes,
+    class: className = '',
+    loading = 'lazy',
+    decoding = 'async',
+  }) {
     const extension = path.extname(src).slice(1).toLowerCase();
 
     const { widths, sizes } = {
@@ -31,6 +40,10 @@ module.exports = {
       marple: {
         widths: [160, 320],
         sizes: '(min-width: 580px) 160px, calc(26.92vw + 9px)',
+      },
+      custom: {
+        widths: customWidths,
+        sizes: customSizes,
       },
     }[sizeType];
 

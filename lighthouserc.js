@@ -14,6 +14,7 @@ module.exports = {
         'csp-xss': 'off',
 
         'render-blocking-resources': ['warning', { maxLength: 1 }],
+        'uses-responsive-images': ['warning', { maxLength: 1 }],
       },
     },
   },

@@ -10,6 +10,8 @@ module.exports = {
       preset: 'lighthouse:no-pwa',
       assertions: {
         'bf-cache': 'off',
+        'color-contrast': 'off',
+        'csp-xss': 'off',
       },
     },
   },

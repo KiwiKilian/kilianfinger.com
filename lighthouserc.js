@@ -12,6 +12,8 @@ module.exports = {
         'bf-cache': 'off',
         'color-contrast': 'off',
         'csp-xss': 'off',
+
+        'render-blocking-resources': ['warning', { maxLength: 1 }],
       },
     },
   },

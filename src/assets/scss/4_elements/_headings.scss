@@ -7,6 +7,10 @@ h6 {
   font-family: 'Gilroy', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+
+  code {
+    text-transform: none;
+  }
 }
 
 h1,

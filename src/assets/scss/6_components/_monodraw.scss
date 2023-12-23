@@ -1,0 +1,31 @@
+.monodraw {
+  @include margin-bottom(2rem);
+
+  &__pre {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__scroll-container {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__code {
+    @include font-size(1rem);
+    font-family:
+      'JetBrains Mono',
+      Menlo,
+      Monaco,
+      Consolas,
+      Courier New,
+      monospace;
+    white-space: pre;
+  }
+
+  &__caption {
+    text-align: center;
+    @include font-size(1.5rem);
+  }
+}

@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 .post-content {
-  code:not([class]):not(pre > code) {
+  code:not([class]):not(pre.shiki code) {
     color: white;
     background-color: var(--blue-black);
     padding: 0.2rem 0.4rem;
@@ -23,5 +23,10 @@
   li {
     @include font-size(1.5rem);
     line-height: math.div(3, 2);
+  }
+
+  h2 {
+    @include margin-top(4rem);
+    @include margin-bottom(1rem);
   }
 }

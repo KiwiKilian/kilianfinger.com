@@ -1,12 +1,7 @@
-pre {
+pre.shiki {
   @include padding(1rem);
   @include margin-bottom(2rem);
-  overflow-x: auto;
   position: relative;
-}
-
-pre.shiki {
-  overflow-x: visible;
 }
 
 pre.shiki:hover .dim {
@@ -52,7 +47,6 @@ pre.twoslash data-lsp:hover::before {
   content: attr(lsp);
   position: absolute;
   transform: translate(0, 1rem);
-
   background-color: #3f3f3f;
   color: #fff;
   text-align: left;
@@ -64,12 +58,12 @@ pre.twoslash data-lsp:hover::before {
   z-index: 100;
 }
 
-pre .code-container {
+pre.shiki .code-container {
   overflow: auto;
 }
 
 /* The try button */
-pre .code-container>a {
+pre.shiki .code-container>a {
   position: absolute;
   right: 8px;
   bottom: 8px;
@@ -85,33 +79,33 @@ pre .code-container>a {
 
 /* Respect no animations */
 @media (prefers-reduced-motion: reduce) {
-  pre .code-container>a {
+  pre.shiki .code-container>a {
     transition: none;
   }
 }
-pre .code-container > a:hover,
-pre .code-container > a:focus {
+pre.shiki .code-container > a:hover,
+pre.shiki .code-container > a:focus {
   color: white;
   background-color: var(--link-color);
   opacity: 1;
 }
-pre .code-container:hover a,
-pre .code-container:focus a {
+pre.shiki .code-container:hover a,
+pre.shiki .code-container:focus a {
   opacity: 1;
 }
 
-pre code {
-  //font-size: 15px;
+pre.shiki code {
+  @include font-size(1rem);
   font-family: "JetBrains Mono", Menlo, Monaco, Consolas, Courier New, monospace;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
 }
 
-pre code a {
+pre.shiki code a {
   text-decoration: none;
 }
 
-pre .query {
+pre.shiki .query {
   margin-bottom: 10px;
   color: #137998;
   display: inline-block;
@@ -123,8 +117,8 @@ pre .query {
 
   /* This sections keeps both of those two in in sync  */
 
-pre .error,
-pre .error-behind {
+pre.shiki .error,
+pre.shiki .error-behind {
   margin-left: -14px;
   margin-top: 8px;
   margin-bottom: 4px;
@@ -135,7 +129,7 @@ pre .error-behind {
   display: block;
 }
 
-pre .error {
+pre.shiki .error {
   position: absolute;
   background-color: #fee;
   border-left: 2px solid #bf1818;
@@ -146,18 +140,18 @@ pre .error {
   color: black;
 }
 
-pre .error .code {
+pre.shiki .error .code {
   display: none;
 }
 
-pre .error-behind {
+pre.shiki .error-behind {
   user-select: none;
   visibility: transparent;
   color: #fee;
 }
 
 /* Queries */
-pre .arrow {
+pre.shiki .arrow {
   /* Transparent background */
   background-color: #eee;
   position: relative;
@@ -172,7 +166,7 @@ pre .arrow {
   width: 8px;
 }
 
-pre .popover {
+pre.shiki .popover {
   margin-bottom: 10px;
   background-color: #eee;
   display: inline-block;
@@ -182,7 +176,7 @@ pre .popover {
 }
 
 /* Completion */
-pre .inline-completions ul.dropdown {
+pre.shiki .inline-completions ul.dropdown {
   display: inline-block;
   position: absolute;
   width: 240px;
@@ -196,7 +190,7 @@ pre .inline-completions ul.dropdown {
   border-left: 4px solid #4b9edd;
 }
 
-pre .inline-completions ul.dropdown::before {
+pre.shiki .inline-completions ul.dropdown::before {
   background-color: #4b9edd;
   width: 2px;
   position: absolute;
@@ -205,21 +199,21 @@ pre .inline-completions ul.dropdown::before {
   content: " ";
 }
 
-pre .inline-completions ul.dropdown li {
+pre.shiki .inline-completions ul.dropdown li {
   overflow-x: hidden;
   padding-left: 4px;
   margin-bottom: 4px;
 }
 
-pre .inline-completions ul.dropdown li.deprecated {
+pre.shiki .inline-completions ul.dropdown li.deprecated {
   text-decoration: line-through;
 }
 
-pre .inline-completions ul.dropdown li span.result-found {
+pre.shiki .inline-completions ul.dropdown li span.result-found {
   color: #2265a5;
 }
 
-pre .inline-completions ul.dropdown li span.result {
+pre.shiki .inline-completions ul.dropdown li span.result {
   width: 100px;
   color: black;
   display: inline-block;

@@ -1,6 +1,4 @@
 .monodraw {
-  @include margin-bottom(2rem);
-
   &__pre {
     position: relative;
     display: flex;
@@ -22,10 +20,5 @@
       Courier New,
       monospace;
     white-space: pre;
-  }
-
-  &__caption {
-    text-align: center;
-    @include font-size(1.5rem);
   }
 }

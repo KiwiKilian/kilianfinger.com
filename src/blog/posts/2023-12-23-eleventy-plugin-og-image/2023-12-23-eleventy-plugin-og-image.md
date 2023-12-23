@@ -1,7 +1,6 @@
 ---
 title: Generating OG Images in Eleventy
 subTitle: Leveraging HTML and CSS without harming a headless browser
-draft: true
 description: Creating OG images for your Eleventy page is really easy with eleventy-plugin-og-image. I show you how!
 date: 2023-12-23
 ---

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 <head>
+    {{ page | log }}
     <meta charset="utf-8">
     <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,7 +12,7 @@
 
     <meta property="og:title" content="{{ title or site.name }}"/>
     <meta property="og:type" content="{{ type or site.type }}"/>
-    <meta property="og:url" content="{{ url or site.url }}"/>
+    <meta property="og:url" content="{{ site.url + page.url }}"/>
     <meta property="og:site_name" content="{{ name or site.name }}"/>
     <meta property="og:description" content="{{ description or site.description }}"/>
     {% if metaImage %}

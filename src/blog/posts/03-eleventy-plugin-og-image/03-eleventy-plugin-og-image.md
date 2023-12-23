@@ -1,9 +1,9 @@
 ---
 title: Generating OG Images in Eleventy
 subTitle: Leveraging HTML and CSS without harming a headless browser
-description: ...
-date: 2023-03-20
 draft: true
+description: Creating OG images for your Eleventy page is really easy with eleventy-plugin-og-image. I show you how!
+date: 2023-12-23
 ---
 
 Open Graph (OG) Images represent your content on the web when being shared. They are those little preview images

@@ -22,8 +22,7 @@
     "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "rimraf _site",
-    "format": "prettier --write **/*.{js,json,scss,yml} !_site",
-    "vale": "npx vale *.md"
+    "format": "prettier --write **/*.{js,json,scss,yml} !_site"
   },
   "prettier": "@kiwikilian/prettier-config",
   "engines": {
@@ -42,7 +41,6 @@
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-vite": "4.0.0",
     "@kiwikilian/prettier-config": "1.0.1",
-    "@ocular-d/vale-bin": "2.29.6",
     "cheerio": "1.0.0-rc.12",
     "eleventy-plugin-og-image": "2.1.1",
     "eleventy-plugin-shiki-twoslash": "1.1.3",

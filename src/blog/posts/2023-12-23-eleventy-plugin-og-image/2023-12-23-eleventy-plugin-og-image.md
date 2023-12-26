@@ -5,8 +5,8 @@ description: Creating OG images for your Eleventy page is really easy with eleve
 date: 2023-12-23
 ---
 
-Open Graph (OG) Images represent your content on the web when being shared. They are those little preview images
-displayed next to your link on social media, messengers or your journaling app.
+Open Graph (OG) Images represent your content on the web when shared. They are those little preview images
+displayed next to your link on social media, messengers or your journal app.
 
 If you're not keen to create an OG Image manually for each of your pages on your Eleventy site, there are mainly two
 approaches to generate them:
@@ -18,12 +18,11 @@ First approach is easy to style but hard to render. Managing a headless browser 
 approach might be a bit harder to style, depending on your level of SVG knowledge, but is much more consistent to
 render.
 
-Combining the best of both worlds I would like to
-introduce [`eleventy-plugin-og-image`](https://github.com/KiwiKilian/eleventy-plugin-og-image) – it's a shameless plug
+Combining the best of both worlds let me
+introduce [`eleventy-plugin-og-image`](https://github.com/KiwiKilian/eleventy-plugin-og-image) – it is a shameless plug
 of my very first open source project. It allows to create OG images from HTML (or any template language supported by
-Eleventy) and CSS. Instead of using a headless browser, [`satori`](https://github.com/vercel/satori) is used to
-transform your HTML to SVG allowing a simple rendering to bitmap afterward. The complete flow is seen in
-the [following diagram](#flow):
+Eleventy) and CSS. Instead of a headless browser, [`satori`](https://github.com/vercel/satori) transforms your HTML to
+SVG, allowing a simple rendering to bitmap afterward. This is the complete render flow:
 
 <figure id="flow" class="monodraw">
 <pre class="monodraw__pre"><div class="monodraw__scroll-container"><code class="monodraw__code">┌──────────┐
@@ -46,14 +45,14 @@ the [following diagram](#flow):
 
 ## How to setup [`eleventy-plugin-og-image`](https://github.com/KiwiKilian/eleventy-plugin-og-image)
 
-First we'll install the package:
+First install the package:
 
 ```bash
 npm install eleventy-plugin-og-image --save-dev
 ```
 
-Afterward we add the plugin to our `.eleventy.js`. Note, this example config already uses ESM
-with `@11ty/eleventy@3.0.0`. You need to load all fonts, which you are using in your
+Afterward we add the plugin to our `.eleventy.js`. Note, this example configuration already uses ESM
+with `@11ty/eleventy@3.0.0`. You need to load all fonts, which are used in your
 OG-image-templates:
 
 ```js
@@ -76,7 +75,7 @@ export default async function (eleventyConfig) {
 };
 ```
 
-Now we create an OG-image-template `og-image.og.njk`. It's easiest to place the CSS in a `<style>` tag directly in your
+Now we create an OG-image-template `og-image.og.njk`. It is easiest to place the CSS in a `<style>` tag directly in your
 template:
 
 ```twig
@@ -105,9 +104,9 @@ template:
 The styles will be inlined as `style=""` attributes by the plugin. You can use remote images, which will be fetched
 during rendering. This template expects to get a `title` attribute provided as data.
 
-Now it's only left to call the `ogImage` shortcode inside your `<head>` of a page template or layout. The first argument
-of the shortcode is the filePath of the OG-image-template (required), second argument is for data (optional). This is
-how it looks in a `example-page.njk`:
+Last call the `ogImage` shortcode inside your `<head>` of a page template or layout. The first argument
+of the shortcode is the `filePath` of the OG-image-template (required), second argument is for `data` (optional). This
+is how it looks in a `example-page.njk`:
 
 ```twig
 {{ '{% ogImage "./og-image.og.njk", { title: "Hello World!" } %}' }}
@@ -124,6 +123,7 @@ The `ogImage` shortcode generates the following HTML into the compiled `_site/ex
 your OG image:
 
 ```html
+
 <meta property="og:image" content="/og-images/s0m3h4sh.png"/>
 ```
 

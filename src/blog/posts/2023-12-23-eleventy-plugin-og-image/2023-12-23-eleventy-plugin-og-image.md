@@ -123,7 +123,6 @@ The `ogImage` shortcode generates the following HTML into the compiled `_site/ex
 your OG image:
 
 ```html
-
 <meta property="og:image" content="/og-images/s0m3h4sh.png"/>
 ```
 

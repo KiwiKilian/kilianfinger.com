@@ -6,7 +6,7 @@
     "order": 0
   },
   "metaImage": {
-    "path": "./src/home/home.og.njk",
+    "path": "./home/home.og.njk",
     "data": {"title": "Kilian Finger"}
   },
   "projects": [

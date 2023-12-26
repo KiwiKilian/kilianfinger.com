@@ -1,20 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-const yaml = require('js-yaml');
-const NavigationPlugin = require('@11ty/eleventy-navigation');
-const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
-const EleventyPluginOgImage = require('eleventy-plugin-og-image');
-const EleventyPluginNavigation = require('@11ty/eleventy-navigation');
-const EleventyPluginRss = require('@11ty/eleventy-plugin-rss');
-const shikiTwoslash = require('eleventy-plugin-shiki-twoslash');
-const markdownItAnchor = require('markdown-it-anchor');
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+import NavigationPlugin from '@11ty/eleventy-navigation';
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import EleventyPluginRss from '@11ty/eleventy-plugin-rss';
+import markdownItAnchor from 'markdown-it-anchor';
 
-const filters = require('./utils/filters');
-const shortcodes = require('./utils/shortcodes');
-const transforms = require('./utils/transforms');
+import PluginShikiTwoslash from './plugins/shiki-twoslash.js';
+import PluginDrafts from './plugins/drafts.js';
+import * as filters from './utils/filters.js';
+import * as shortcodes from './utils/shortcodes.js';
+import * as transforms from './utils/transforms.js';
 
 /** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
-module.exports = (eleventyConfig) => {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/public/!(*.njk)');
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/**/*.js');
@@ -62,8 +62,8 @@ module.exports = (eleventyConfig) => {
     trimBlocks: true,
   });
 
-  eleventyConfig.addNunjucksShortcode('inlineImage', shortcodes.inlineImage);
-  eleventyConfig.addNunjucksAsyncShortcode('image', shortcodes.image);
+  eleventyConfig.addNunjucksShortcode('inlineImage', shortcodes.inlineImageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode('image', shortcodes.imageShortcode);
 
   /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */
   const eleventyPluginOgImageOptions = {
@@ -88,13 +88,13 @@ module.exports = (eleventyConfig) => {
   };
   eleventyConfig.addPlugin(EleventyPluginOgImage, eleventyPluginOgImageOptions);
 
-  eleventyConfig.addPlugin(EleventyPluginNavigation);
+  eleventyConfig.addPlugin(NavigationPlugin);
   eleventyConfig.addPlugin(EleventyPluginRss);
-  eleventyConfig.addPlugin(shikiTwoslash, {
+  eleventyConfig.addPlugin(PluginShikiTwoslash, {
     themes: ['../../../src/assets/shiki/OneDark-Pro'],
     theme: 'One Dark Pro',
   });
-  eleventyConfig.addPlugin(require('./.eleventy.drafts.js'));
+  eleventyConfig.addPlugin(PluginDrafts);
 
   eleventyConfig.amendLibrary('md', (mdLib) => {
     mdLib.use(markdownItAnchor, {
@@ -115,4 +115,4 @@ module.exports = (eleventyConfig) => {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
   };
-};
+}

@@ -52,5 +52,10 @@
     "rimraf": "5.0.5",
     "sass": "1.69.5",
     "vite": "5.0.10"
+  },
+  "overrides": {
+    "@11ty/eleventy-img": {
+      "sharp": "0.33.1"
+    }
   }
 }

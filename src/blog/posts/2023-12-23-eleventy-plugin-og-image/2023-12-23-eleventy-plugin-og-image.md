@@ -25,7 +25,7 @@ Eleventy) and CSS. Instead of a headless browser, [`satori`](https://github.com/
 SVG, allowing a simple rendering to bitmap afterward. This is the complete render flow:
 
 <figure id="flow" class="monodraw">
-<pre class="monodraw__pre"><div class="monodraw__scroll-container"><code class="monodraw__code">┌──────────┐
+<pre class="monodraw__pre" role="img" aria-label="Rendering flow"><span class="monodraw__scroll-container"><code class="monodraw__code">┌──────────┐
 │ Template │─────────┐
 ├──────────┤         │
 │   Data   │─────Eleventy─────┬─────┐
@@ -38,7 +38,7 @@ SVG, allowing a simple rendering to bitmap afterward. This is the complete rende
 ┌────────┐           ┌─────┐  │     │
 │ Bitmap │◀─resvg-js─│ SVG │◀─satori┘
 └────────┘           └─────┘</code>
-</div>
+</span>
 </pre>
 <figcaption class="monodraw__caption">Flow of OG image generation</figcaption>
 </figure>

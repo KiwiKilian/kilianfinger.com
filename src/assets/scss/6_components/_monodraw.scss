@@ -6,6 +6,7 @@
   }
 
   &__scroll-container {
+    display: block;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }

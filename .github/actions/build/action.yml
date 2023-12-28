@@ -12,7 +12,7 @@ runs:
         path: _site
     - run: npm run build
       shell: bash
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: build
         path: _site

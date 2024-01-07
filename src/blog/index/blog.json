@@ -1,4 +1,5 @@
 {
+  "title": "Blog",
   "permalink": "/blog/",
   "eleventyNavigation": {
     "key": "Blog",

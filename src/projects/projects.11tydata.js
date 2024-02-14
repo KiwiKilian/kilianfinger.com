@@ -1,9 +1,11 @@
 export default {
   eleventyComputed: {
     metaImage: {
-      path: './blog/posts/post.og.njk',
+      path: './projects/project.og.njk',
       data: {
         title: (data) => data.title,
+        projectSlug: (data) => data.projectSlug,
+        themeColor: (data) => data.themeColor,
       },
     },
   },

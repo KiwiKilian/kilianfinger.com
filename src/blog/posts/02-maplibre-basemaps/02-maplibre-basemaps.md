@@ -6,7 +6,6 @@ date: 2023-02-12
 draft: true
 ---
 
-
 A few years ago I worked at a digital agency. Nine out of ten projects would include placing a little Google Maps
 embedding on the contact page showing the location of the company. Just one of many smart moves by Google getting notice
 of our page loads.

@@ -3,24 +3,30 @@ permalink: public/blog/feed.xml
 path: blog/feed.xml
 eleventyExcludeFromCollections: true
 ---
+
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>{{ site.name }}</title>
-        <link>{{ site.url }}</link>
-        <atom:link href="{{ path | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
-        <description>{{ site.description }}</description>
-        <language>{{ site.lang }}</language>
-        {%- for post in collections.posts | reverse %}
-            {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
-            <item>
-                <title>{{ post.data.title }}</title>
-                <link>{{ absolutePostUrl }}</link>
-                <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-                <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-                <dc:creator>Kilian Finger</dc:creator>
-                <guid>{{ absolutePostUrl }}</guid>
-            </item>
-        {%- endfor %}
-    </channel>
+<rss
+  version="2.0"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="{{ metadata.url }}"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+>
+  <channel>
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ path | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
+    <description>{{ site.description }}</description>
+    <language>{{ site.lang }}</language>
+    {%- for post in collections.posts | reverse -%}
+      {%- set absolutePostUrl = post.url | absoluteUrl(site.url) -%}
+      <item>
+        <title>{{ post.data.title }}</title>
+        <link>{{ absolutePostUrl }}</link>
+        <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+        <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+        <dc:creator>Kilian Finger</dc:creator>
+        <guid>{{ absolutePostUrl }}</guid>
+      </item>
+    {%- endfor -%}
+  </channel>
 </rss>

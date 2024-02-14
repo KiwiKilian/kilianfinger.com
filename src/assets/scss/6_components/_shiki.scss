@@ -52,7 +52,13 @@ pre.twoslash data-lsp:hover::before {
   text-align: left;
   padding: 5px 8px;
   border-radius: 2px;
-  font-family: "JetBrains Mono", Menlo, Monaco, Consolas, Courier New, monospace;
+  font-family:
+    'JetBrains Mono',
+    Menlo,
+    Monaco,
+    Consolas,
+    Courier New,
+    monospace;
   font-size: 14px;
   white-space: pre-wrap;
   z-index: 100;
@@ -63,7 +69,7 @@ pre.shiki .code-container {
 }
 
 /* The try button */
-pre.shiki .code-container>a {
+pre.shiki .code-container > a {
   position: absolute;
   right: 8px;
   bottom: 8px;
@@ -79,7 +85,7 @@ pre.shiki .code-container>a {
 
 /* Respect no animations */
 @media (prefers-reduced-motion: reduce) {
-  pre.shiki .code-container>a {
+  pre.shiki .code-container > a {
     transition: none;
   }
 }
@@ -96,7 +102,13 @@ pre.shiki .code-container:focus a {
 
 pre.shiki code {
   @include font-size(1rem);
-  font-family: "JetBrains Mono", Menlo, Monaco, Consolas, Courier New, monospace;
+  font-family:
+    'JetBrains Mono',
+    Menlo,
+    Monaco,
+    Consolas,
+    Courier New,
+    monospace;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
 }
@@ -180,7 +192,7 @@ pre.shiki .inline-completions ul.dropdown {
   display: inline-block;
   position: absolute;
   width: 240px;
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   color: #333;
   padding-top: 4px;
   font-family: var(--code-font);
@@ -196,7 +208,7 @@ pre.shiki .inline-completions ul.dropdown::before {
   position: absolute;
   top: -1.2rem;
   left: -3px;
-  content: " ";
+  content: ' ';
 }
 
 pre.shiki .inline-completions ul.dropdown li {
@@ -245,8 +257,13 @@ data-lsp {
 
   .twoslash-annotation {
     position: absolute;
-    font-family: "JetBrains Mono", Menlo, Monaco, Consolas, Courier New,
-    monospace;
+    font-family:
+      'JetBrains Mono',
+      Menlo,
+      Monaco,
+      Consolas,
+      Courier New,
+      monospace;
 
     right: -210px;
     width: 200px;

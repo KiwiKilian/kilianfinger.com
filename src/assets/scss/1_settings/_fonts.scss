@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/gilroy/gilroy-extrabold-webfont.woff2') format('woff2'),
+  src:
+    url('../fonts/gilroy/gilroy-extrabold-webfont.woff2') format('woff2'),
     url('../fonts/gilroy/gilroy-extrabold-webfont.woff') format('woff');
   font-weight: 900;
   font-style: normal;
@@ -10,7 +11,8 @@
 @font-face {
   font-family: 'Silka';
   src: url('../fonts/silka/silka-regular-webfont.eot');
-  src: url('../fonts/silka/silka-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('../fonts/silka/silka-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('../fonts/silka/silka-regular-webfont.woff2') format('woff2'),
     url('../fonts/silka/silka-regular-webfont.woff') format('woff'),
     url('../fonts/silka/silka-regular-webfont.ttf') format('truetype');

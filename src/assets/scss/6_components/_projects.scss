@@ -58,7 +58,10 @@
     background-color: var(--blue-black);
     display: inline-block;
     max-width: min-content;
-    text-shadow: 1.8px 1.8px 3.6px rgba(0, 0, 0, 0.028), 5px 5px 10px rgba(0, 0, 0, 0.04),
-      12.1px 12.1px 24.1px rgba(0, 0, 0, 0.052), 40px 40px 80px rgba(0, 0, 0, 0.08);
+    text-shadow:
+      1.8px 1.8px 3.6px rgba(0, 0, 0, 0.028),
+      5px 5px 10px rgba(0, 0, 0, 0.04),
+      12.1px 12.1px 24.1px rgba(0, 0, 0, 0.052),
+      40px 40px 80px rgba(0, 0, 0, 0.08);
   }
 }

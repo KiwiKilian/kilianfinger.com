@@ -1,55 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.lang }}">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.name }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{ description or site.description }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/blog/feed.xml">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta name="generator" content="{{ eleventy.generator }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="{{ description or site.description }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/blog/feed.xml" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
 
-    <meta property="og:title" content="{{ title or site.name }}"/>
-    <meta property="og:type" content="{{ type or site.type }}"/>
-    <meta property="og:url" content="{{ site.url + page.url }}"/>
-    <meta property="og:site_name" content="{{ name or site.name }}"/>
-    <meta property="og:description" content="{{ description or site.description }}"/>
+    <meta property="og:title" content="{{ title or site.name }}" />
+    <meta property="og:type" content="{{ type or site.type }}" />
+    <meta property="og:url" content="{{ site.url + page.url }}" />
+    <meta property="og:site_name" content="{{ name or site.name }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
     {% if metaImage %}
-        {% ogImage metaImage.path, metaImage.data %}
+      {% ogImage metaImage.path, metaImage.data %}
     {% endif %}
 
-    {% block head %}{% endblock %}
+    {% block head %}
+    {% endblock %}
 
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}">
-    <meta name="theme-color" content="{{ themeColor or site.themeColor }}">
-    <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload">
-    <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload">
-</head>
-<body class="theme-color{% if projectSlug %} theme-color--{{ projectSlug }}{% endif %}">
-<header class="header">
-    <nav class="container header__navigation">
-
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="{{ '/assets/scss/main.scss' | url }}" />
+    <meta name="theme-color" content="{{ themeColor or site.themeColor }}" />
+    <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload" />
+    <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload" />
+  </head>
+  <body class="theme-color{% if projectSlug %}theme-color--{{ projectSlug }}{% endif %}">
+    <header class="header">
+      <nav class="container header__navigation">
         {% set navPages = collections.all | eleventyNavigation %}
         <ul class="header__navigation-list">
-            {% for page in navPages %}
-                <li class="header__navigation-item">
-                    <a class="header__navigation-link" href="{{ page.url }}">{{ page.title }}</a>
-                </li>
-            {% endfor %}
+          {% for page in navPages %}
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    {% block content %}
+    <main>
+      {% block content %}
         {{ content | safe }}
-    {% endblock %}
-</main>
+      {% endblock %}
+    </main>
 
-{% include '../footer.njk' %}
-
-</body>
+    {% include '../footer.njk' %}
+  </body>
 </html>

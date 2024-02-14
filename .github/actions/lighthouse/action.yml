@@ -2,7 +2,7 @@ name: Lighthouse CI
 description: Check Lighthouse scores
 inputs:
   LHCI_GITHUB_APP_TOKEN:
-    description: "Token from Lighthouse CI GitHub App"
+    description: 'Token from Lighthouse CI GitHub App'
     required: true
 
 runs:

@@ -60,19 +60,19 @@ import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 
 /** @param { import('@11ty/eleventy/src/UserConfig').default } eleventyConfig */
 export default async function (eleventyConfig) {
-    eleventyConfig.addPlugin(EleventyPluginOgImage, {
-        satoriOptions: {
-            fonts: [
-                {
-                    name: 'Inter',
-                    data: fs.readFileSync('../path/to/font-file/inter.woff'),
-                    weight: 700,
-                    style: 'normal',
-                },
-            ],
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'Inter',
+          data: fs.readFileSync('../path/to/font-file/inter.woff'),
+          weight: 700,
+          style: 'normal',
         },
-    });
-};
+      ],
+    },
+  });
+}
 ```
 
 Now we create an OG-image-template `og-image.og.njk`. It is easiest to place the CSS in a `<style>` tag directly in your
@@ -123,7 +123,7 @@ The `ogImage` shortcode generates the following HTML into the compiled `_site/ex
 your OG image:
 
 ```html
-<meta property="og:image" content="/og-images/s0m3h4sh.png"/>
+<meta property="og:image" content="/og-images/s0m3h4sh.png" />
 ```
 
 For more configuration and usage options see

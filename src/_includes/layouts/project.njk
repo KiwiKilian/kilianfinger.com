@@ -3,50 +3,58 @@ layout: layouts/base
 ---
 
 <div class="project-intro">
-    {% image {
-        src: "projects/"~projectSlug~".png",
-        alt: title, class: "project-intro__image",
-        sizeType: "custom",
-        widths: [256, 810, 1120, 1360, 1560, 1740, 1900, 2048],
-        sizes: "calc(97.52vw - 54px)",
-        loading: "eager",
-        decoding: "sync"
-    } %}
-    <h1 class="project-intro__heading">{{ title }}</h1>
+  {%
+    image {
+    src: "projects/"~projectSlug~".png",
+    alt: title, class: "project-intro__image",
+    sizeType: "custom",
+    widths: [256, 810, 1120, 1360, 1560, 1740, 1900, 2048],
+    sizes: "calc(97.52vw - 54px)",
+    loading: "eager",
+    decoding: "sync"
+    }
+  %}
+  <h1 class="project-intro__heading">{{ title }}</h1>
 </div>
 
 <div class="container container--narrow container--vertical">
-    {{ content | safe }}
+  {{ content | safe }}
 
-    <div class="project-details">
-        {% include 'tags.njk' %}
+  <div class="project-details">
+    {% include 'tags.njk' %}
 
-        {% if projectAttribution %}
-            <div class="project-attribution">
-                <div class="project-attribution__label">A project by</div>
+    {% if projectAttribution %}
+      <div class="project-attribution">
+        <div class="project-attribution__label">A project by</div>
 
-                {% if projectAttribution == 'trafficon' %}
-                    <a title="Trafficon" href="https://www.trafficon.eu/">
-                        <img class="project-attribution__image" alt="Trafficon" width="200" height="67"
-                             src="/assets/images/projects/trafficon.svg"/>
-                    </a>
-                {% endif %}
-
-                {% if projectAttribution == 'pooliestudios' %}
-                    <a title="pooliestudios" href="https://pooliestudios.com/">
-                        <img class="project-attribution__image" alt="pooliestudios" width="200" height="56"
-                             src="/assets/images/projects/pooliestudios.svg"/>
-                    </a>
-                {% endif %}
-            </div>
+        {% if projectAttribution == 'trafficon' %}
+          <a title="Trafficon" href="https://www.trafficon.eu/">
+            <img
+              class="project-attribution__image"
+              alt="Trafficon"
+              width="200"
+              height="67"
+              src="/assets/images/projects/trafficon.svg"
+            />
+          </a>
         {% endif %}
-    </div>
 
-    <div class="project-back">
-        <a href="/#projects" class="project-back__link">‹ All <span>projects</span></a>
-    </div>
+        {% if projectAttribution == 'pooliestudios' %}
+          <a title="pooliestudios" href="https://pooliestudios.com/">
+            <img
+              class="project-attribution__image"
+              alt="pooliestudios"
+              width="200"
+              height="56"
+              src="/assets/images/projects/pooliestudios.svg"
+            />
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="project-back">
+    <a href="/#projects" class="project-back__link">‹ All <span>projects</span></a>
+  </div>
 </div>
-
-
-
-

@@ -62,7 +62,7 @@ export default function (eleventyConfig) {
     trimBlocks: true,
   });
 
-  eleventyConfig.addNunjucksShortcode('inlineImage', shortcodes.inlineImageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode('inlineImage', shortcodes.inlineImageShortcode);
   eleventyConfig.addNunjucksAsyncShortcode('image', shortcodes.imageShortcode);
 
   /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */

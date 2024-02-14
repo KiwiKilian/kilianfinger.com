@@ -1,15 +1,15 @@
-import fs from 'fs';
-import path from 'path';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 import Image from '@11ty/eleventy-img';
 
 const OUTPUT_DIR = '_site/assets';
 const URL_PATH = '/assets/';
 const FILENAME_FORMAT = (id, src, width, format) => `${path.parse(src).name}@${width}.${id}.${format}`;
 
-export function inlineImageShortcode(path) {
-  const file = fs.readFileSync(path);
+export async function inlineImageShortcode(path) {
+  const base64Image = await fs.readFile(path, 'base64');
 
-  return `data:image/jpeg;base64,${file.toString('base64')}`;
+  return `data:image/jpeg;base64,${base64Image}`;
 }
 
 export async function imageShortcode({

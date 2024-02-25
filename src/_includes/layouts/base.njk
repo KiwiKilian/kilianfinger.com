@@ -29,7 +29,7 @@
     <link as="font" crossorigin="anonymous" href="/assets/fonts/gilroy/gilroy-extrabold-webfont.woff2" rel="preload" />
     <link as="font" crossorigin="anonymous" href="/assets/fonts/silka/silka-regular-webfont.woff2" rel="preload" />
   </head>
-  <body class="theme-color{% if projectSlug %}theme-color--{{ projectSlug }}{% endif %}">
+  <body class="theme-color{% if projectSlug %}{{ " theme-color--"~projectSlug }}{% endif %}">
     <header class="header">
       <nav class="container header__navigation">
         {% set navPages = collections.all | eleventyNavigation %}

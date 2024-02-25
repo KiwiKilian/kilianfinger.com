@@ -1,6 +1,6 @@
 <ul class="tags {{ tagsClass }}">
   {% for tag in tags %}
-    <li class="tags__item{% if tag.type is defined %}tags__item--topic{% endif %}">
+    <li class="tags__item{% if tag.type is defined %}{{ " tags__item--topic" }}{% endif %}">
       {%- if tag.link -%}
         <a class="tags__link" href="{{ tag.link }}">{{ tag.name }}</a>
       {%- else -%}

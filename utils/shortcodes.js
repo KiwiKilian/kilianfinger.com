@@ -53,6 +53,7 @@ export async function imageShortcode({
     filenameFormat: FILENAME_FORMAT,
     urlPath: URL_PATH,
     outputDir: OUTPUT_DIR,
+    hashLength: 8,
   });
 
   let imgData = metadata.jpeg || metadata.png;

@@ -6,8 +6,8 @@ const OUTPUT_DIR = '_site/assets';
 const URL_PATH = '/assets/';
 const FILENAME_FORMAT = (id, src, width, format) => `${path.parse(src).name}@${width}.${id}.${format}`;
 
-export async function inlineImageShortcode(path) {
-  const base64Image = await fs.readFile(path, 'base64');
+export async function inlineImageShortcode(imagePath) {
+  const base64Image = await fs.readFile(path.join(this.eleventy.directories.input, imagePath), 'base64');
 
   return `data:image/jpeg;base64,${base64Image}`;
 }

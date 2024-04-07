@@ -12,6 +12,7 @@ import PluginDrafts from './plugins/drafts.js';
 import * as filters from './utils/filters.js';
 import * as shortcodes from './utils/shortcodes.js';
 import * as transforms from './utils/transforms.js';
+import { OgImage } from './utils/OgImage.js';
 
 /** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
 export default function (eleventyConfig) {
@@ -67,7 +68,7 @@ export default function (eleventyConfig) {
 
   /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */
   const eleventyPluginOgImageOptions = {
-    outputDir: '_site/public/og-images',
+    outputDir: 'public/og-images',
 
     satoriOptions: {
       fonts: [
@@ -85,6 +86,8 @@ export default function (eleventyConfig) {
         },
       ],
     },
+
+    OgImage,
   };
   eleventyConfig.addPlugin(EleventyPluginOgImage, eleventyPluginOgImageOptions);
 

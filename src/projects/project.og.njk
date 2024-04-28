@@ -1,72 +1,58 @@
 <style>
-  .root {
-    width: 100%;
-    height: 100%;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 32px solid white;
-    background-color: {{ themeColor }};
-    color: #ffffff;
-  }
+    .root {
+        width: 100%;
+        height: 100%;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 32px solid white;
+        background-color: {{ themeColor }};
+        color: #ffffff;
+        gap: 80px;
+        padding: 0 80px;
+    }
 
-  .title {
-    flex-shrink: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 80px;
-    margin-right: 80px;
-  }
+    .title {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+    }
 
-  .title__main {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 64px;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-  }
+    .title__main {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 64px;
+        text-transform: uppercase;
+    }
 
-  .title__sub {
-    font-family: 'Silka', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    margin-top: 8px;
-  }
+    .title__sub {
+        font-family: 'Silka', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 8px;
+    }
 
-  .image {
-    display: flex;
-    flex-shrink: 0;
-    box-shadow:
-      0 2.7px 5.3px rgba(0, 0, 0, 0.028),
-      0 8.9px 17.9px rgba(0, 0, 0, 0.042),
-      0 40px 80px rgba(0, 0, 0, 0.07);
-    border-width: 12px;
-    border-style: solid;
-    border-color: white;
-  }
-
-  .image__img {
-    width: 100px;
-    height: 49px;
-  }
+    .image {
+        width: 440px;
+        height: 440px;
+        object-fit: contain;
+    }
 </style>
 
 <div class="root">
-  {#    <div class="image">#}
-  {#        <img class="image__img"#}
-  {#             width="2749" height="1342"#}
-  {#             src="{% inlineImage "assets/images/projects/" ~ projectSlug ~ ".png" %}"#}
-  {#             src="{% inlineImage "assets/images/projects/cologne-marathon.png" %}"#}
-  {#        />#}
-  {#    </div>#}
+    <div class="title">
+        <div class="title__sub">kilianfinger.com/{{ page.url.split("/")[1] }}/</div>
+        <div class="title__main">{{ title }}</div>
+    </div>
 
-  <div class="title">
-    <div class="title__sub">kilianfinger.com/{{ page.url.split("/")[1] }}/</div>
-    <div class="title__main">{{ title }}</div>
-  </div>
+    <img class="image"
+         width="{{ projectImage.width }}" height="{{ projectImage.height }}"
+         src="{% inlineImage "assets/images/projects/" ~ projectSlug ~ ".og.png" %}"
+         style="{{ projectImage.style }}"
+    />
 </div>

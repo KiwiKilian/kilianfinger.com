@@ -1,4 +1,11 @@
 {
+  "metaImage": {
+    "projectImage": {
+      "width": 440,
+      "height": 432,
+      "style": "margin-right: -160px;"
+    }
+  },
   "tags": [
     {
       "type": "topic",

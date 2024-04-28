@@ -1,4 +1,10 @@
 {
+  "metaImage": {
+    "projectImage": {
+      "width": 440,
+      "height": 215
+    }
+  },
   "tags": [
     {
       "type": "topic",

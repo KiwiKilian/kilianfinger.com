@@ -9,7 +9,7 @@ const FILENAME_FORMAT = (id, src, width, format) => `${path.parse(src).name}@${w
 export async function inlineImageShortcode(imagePath) {
   const base64Image = await fs.readFile(path.join(this.eleventy.directories.input, imagePath), 'base64');
 
-  return `data:image/jpeg;base64,${base64Image}`;
+  return `data:image/${imagePath.split('.')[imagePath.split('.').length - 1]};base64,${base64Image}`;
 }
 
 export async function imageShortcode({

@@ -69,6 +69,7 @@ export default function (eleventyConfig) {
   /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */
   const eleventyPluginOgImageOptions = {
     outputDir: 'public/og-images',
+    urlPath: 'og-images',
 
     satoriOptions: {
       fonts: [

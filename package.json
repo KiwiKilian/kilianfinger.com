@@ -35,7 +35,7 @@
     "rfs": "10.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.5",
+    "@11ty/eleventy": "3.0.0-alpha.13",
     "@11ty/eleventy-img": "4.0.2",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",

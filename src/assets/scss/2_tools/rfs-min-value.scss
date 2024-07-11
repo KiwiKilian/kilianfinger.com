@@ -1,4 +1,4 @@
-@use '~rfs/scss' as rfs;
+@use 'rfs/scss' as rfs;
 
 @function rfs-value-min($value) {
   $rfs-val: rfs.rfs-value($value);

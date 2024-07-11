@@ -13,6 +13,7 @@ import * as filters from './utils/filters.js';
 import * as shortcodes from './utils/shortcodes.js';
 import * as transforms from './utils/transforms.js';
 import { OgImage } from './utils/OgImage.js';
+import viteConfig from './vite.config.js';
 
 /** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
 export default function (eleventyConfig) {
@@ -21,31 +22,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/**/*.js');
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
-    viteOptions: {
-      build: {
-        modulePreload: { polyfill: false },
-        assetsInlineLimit: 0,
-        rollupOptions: {
-          output: {
-            experimentalMinChunkSize: 0,
-            assetFileNames: (assetInfo) =>
-              ['.jpeg', '.png', '.avif', '.webp'].includes(path.extname(assetInfo.name))
-                ? 'assets/[name].[ext]'
-                : 'assets/[name].[hash].[ext]',
-          },
-        },
-      },
-
-      resolve: {
-        alias: [
-          {
-            // SCSS Modules
-            find: /^~(.*)$/,
-            replacement: '$1',
-          },
-        ],
-      },
-    },
+    viteOptions: viteConfig,
   });
 
   eleventyConfig.addPlugin(NavigationPlugin);

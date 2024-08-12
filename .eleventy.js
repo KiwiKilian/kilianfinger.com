@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import path from 'node:path';
 import yaml from 'js-yaml';
 import NavigationPlugin from '@11ty/eleventy-navigation';
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
@@ -17,7 +16,6 @@ import viteConfig from './vite.config.js';
 
 /** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('src/public/!(*.njk)');
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/**/*.js');
 

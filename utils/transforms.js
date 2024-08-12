@@ -1,4 +1,4 @@
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import htmlMinifier from 'html-minifier';
 
 const shouldTransformHTML = (outputPath) => outputPath && outputPath.endsWith('.html');

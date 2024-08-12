@@ -11,3 +11,9 @@ updates:
     schedule:
       interval: weekly
     assignees: [KiwiKilian]
+
+  - package-ecosystem: github-actions
+    directory: ".github/actions/**"
+    schedule:
+      interval: weekly
+    assignees: [KiwiKilian]

@@ -1,0 +1,3 @@
+root: ./_site/
+ignore_re:
+  - 'Element "div" not allowed as child of element "pre" in this context.'

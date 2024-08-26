@@ -45,7 +45,7 @@
     "eleventy-plugin-og-image": "4.0.0-beta.8",
     "html-minifier": "4.0.0",
     "js-yaml": "4.1.0",
-    "markdown-it-anchor": "9.0.1",
+    "markdown-it-anchor": "9.1.0",
     "prettier": "3.3.3",
     "prettier-plugin-jinja-template": "1.5.0",
     "remark-shiki-twoslash": "3.1.3",

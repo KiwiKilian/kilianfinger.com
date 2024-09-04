@@ -1,8 +1,8 @@
 @use 'sass:math';
 
 p {
-  @include font-size(1.5rem);
   line-height: math.div(3, 2);
+  @include font-size(1.5rem);
 
   &:not(:last-child) {
     @include margin-bottom(2rem);

@@ -1,9 +1,9 @@
 @use 'sass:math';
 
 address {
+  line-height: math.div(3, 2);
   @include padding-left(4rem);
   @include font-size(1.5rem);
-  line-height: math.div(3, 2);
 
   &:not(:last-child) {
     @include margin-bottom(2rem);

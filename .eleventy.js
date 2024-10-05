@@ -14,7 +14,6 @@ import * as transforms from './utils/transforms.js';
 import { OgImage } from './utils/OgImage.js';
 import viteConfig from './vite.config.js';
 
-/** @param { import('@11ty/eleventy/src/UserConfig') } eleventyConfig */
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/**/*.js');

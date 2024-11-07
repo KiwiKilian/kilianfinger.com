@@ -11,7 +11,6 @@ import PluginDrafts from './plugins/drafts.js';
 import * as filters from './utils/filters.js';
 import * as shortcodes from './utils/shortcodes.js';
 import * as transforms from './utils/transforms.js';
-import { OgImage } from './utils/OgImage.js';
 import viteConfig from './vite.config.js';
 
 export default function (eleventyConfig) {
@@ -42,9 +41,8 @@ export default function (eleventyConfig) {
 
   /** @type { import('eleventy-plugin-og-image').EleventyPluginOgImageOptions } */
   const eleventyPluginOgImageOptions = {
-    outputDir: 'public/og-images',
-    urlPath: 'og-images',
-
+    outputDir: 'assets',
+    outputFileSlug: async (ogImage) => `og-image.${await ogImage.hash()}`,
     satoriOptions: {
       fonts: [
         {
@@ -61,8 +59,6 @@ export default function (eleventyConfig) {
         },
       ],
     },
-
-    OgImage,
   };
   eleventyConfig.addPlugin(EleventyPluginOgImage, eleventyPluginOgImageOptions);
 

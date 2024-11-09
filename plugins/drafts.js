@@ -42,7 +42,7 @@ export default function (eleventyConfig) {
 
     // Only log once.
     if (!logged) {
-      console.log(`[11ty] ${text} drafts.`);
+      eleventyConfig.logger.log(`${text} drafts.`);
     }
 
     logged = true;

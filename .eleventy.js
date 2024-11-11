@@ -82,11 +82,11 @@ export default function (eleventyConfig) {
       slugify: eleventyConfig.getFilter('slugify'),
     });
   });
-
-  return {
-    dir: { input: 'src' },
-    templateFormats: ['njk', 'md'],
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
-  };
 }
+
+export const config = {
+  dir: { input: 'src' },
+  templateFormats: ['njk', 'md'],
+  markdownTemplateEngine: 'njk',
+  htmlTemplateEngine: 'njk',
+};

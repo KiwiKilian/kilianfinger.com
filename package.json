@@ -54,6 +54,7 @@
     "vite": "6.0.7"
   },
   "optionalDependencies": {
+    "@resvg/resvg-js-linux-x64-gnu": "2.6.2",
     "@rollup/rollup-linux-x64-gnu": "4.29.1"
   }
 }

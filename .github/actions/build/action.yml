@@ -16,3 +16,4 @@ runs:
       with:
         name: build
         path: _site
+        include-hidden-files: true

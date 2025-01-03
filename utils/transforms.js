@@ -1,20 +1,10 @@
 import * as cheerio from 'cheerio';
-import htmlMinifier from 'html-minifier';
+import htmlnano from 'htmlnano';
 
 const shouldTransformHTML = (outputPath) => outputPath && outputPath.endsWith('.html');
 
-export function htmlMinify(content, outputPath) {
-  return shouldTransformHTML(outputPath)
-    ? htmlMinifier.minify(content, {
-        html5: true,
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-      })
-    : content;
+export async function htmlMinify(content, outputPath) {
+  return shouldTransformHTML(outputPath) ? (await htmlnano.process(content)).html : content;
 }
 
 export function externalLinks(content, outputPath) {

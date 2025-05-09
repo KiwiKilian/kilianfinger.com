@@ -7,11 +7,19 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border: 32px solid white;
         background-color: {{ themeColor }};
         color: #ffffff;
         gap: 80px;
-        padding: 0 80px;
+        padding: 0 112px;
+    }
+
+    .border {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 32px solid white;
     }
 
     .title {
@@ -55,4 +63,6 @@
          src="{% inlineImage "assets/images/projects/" ~ projectSlug ~ ".og.png" %}"
          style="{{ projectImage.style }}"
     />
+
+    <span class="border"></span>
 </div>

@@ -2,8 +2,8 @@
   "metaImage": {
     "projectImage": {
       "width": 440,
-      "height": 432,
-      "style": "margin-right: -160px;"
+      "height": 492,
+      "style": "margin-right: -140px;"
     }
   },
   "tags": [
@@ -46,9 +46,6 @@
     },
     {
       "name": "Geodata"
-    },
-    {
-      "name": "Mapbox"
     },
     {
       "name": "MapLibre"

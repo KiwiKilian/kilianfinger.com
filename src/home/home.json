@@ -11,9 +11,14 @@
   },
   "projects": [
     {
+      "slug": "dynamic-traffic-monitor",
+      "title": "Dynamic Traffic Monitor",
+      "alt": "Traffic light"
+    },
+    {
       "slug": "radroutenplaner-hessen",
       "title": "Radroutenplaner Hessen",
-      "alt": "Frankfurt skyline"
+      "alt": "Bicycle path"
     },
     {
       "slug": "radlkarte-salzburg",

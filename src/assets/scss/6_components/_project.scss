@@ -2,13 +2,18 @@
   --theme-color: var(--red);
   --theme-color-text: var(--blue-black);
 
-  &--radlkarte-salzburg {
-    --theme-color: var(--project-radlkarte);
-    --theme-color-text: var(--blueish-white);
+  &--dynamic-traffic-monitor {
+    --theme-color: var(--project-dynamic-traffic-monitor);
+    --theme-color-text: var(--blue-black);
   }
 
   &--radroutenplaner-hessen {
     --theme-color: var(--project-radroutenplaner-hessen);
+    --theme-color-text: var(--blueish-white);
+  }
+
+  &--radlkarte-salzburg {
+    --theme-color: var(--project-radlkarte);
     --theme-color-text: var(--blueish-white);
   }
 

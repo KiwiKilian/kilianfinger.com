@@ -1,0 +1,59 @@
+{
+  "metaImage": {
+    "projectImage": {
+      "width": 440,
+      "height": 363
+    }
+  },
+  "tags": [
+    {
+      "type": "topic",
+      "name": "Languages"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "type": "topic",
+      "name": "Frameworks"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "TanStack Start"
+    },
+    {
+      "name": "NestJS"
+    },
+    {
+      "type": "topic",
+      "name": "Tools"
+    },
+    {
+      "name": "GitLab CI & CD"
+    },
+    {
+      "name": "OpenAPI Clients"
+    },
+    {
+      "type": "topic",
+      "name": "Topics"
+    },
+    {
+      "name": "Big Data"
+    },
+    {
+      "name": "Data Visualization"
+    },
+    {
+      "name": "Virtualization"
+    },
+    {
+      "name": "Geodata"
+    },
+    {
+      "name": "MapLibre"
+    }
+  ]
+}

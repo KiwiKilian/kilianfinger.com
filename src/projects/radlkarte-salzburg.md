@@ -6,7 +6,9 @@ themeColor: '#00aeea'
 projectAttribution: trafficon
 ---
 
-Radlkarte Salzburg is a web application for calculating bicycle routes in the state of Salzburg 🇦🇹. As a project of the
-municipality and state government it has the best knowledge to guide you on the safest and fastest routes 🚲. The map features locations
-of repair stations, tube dispensers and bike stores for your daily cycling needs. And the rain radar helps
-to reach the destination dry 🌦️.
+Radlkarte Salzburg is a web application for bicycle route planning in the Austrian state of Salzburg 🇦🇹. Developed in
+collaboration with the municipality and state government, it offers authoritative guidance on the safest and most
+efficient cycling routes 🚲.
+
+The interactive map highlights useful amenities like repair stations, tube dispensers, and bike shops – everything you
+need for daily cycling. A built-in rain radar 🌦️ helps riders plan ahead and stay dry on the go.

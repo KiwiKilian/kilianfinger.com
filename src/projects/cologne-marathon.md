@@ -6,7 +6,9 @@ themeColor: '#d53741'
 projectAttribution: pooliestudios
 ---
 
-For the 2018 and 2019 edition of the Cologne Marathon 🏃‍♀️🏃 a custom app was developed. It includes all functionalities
-for runners and bystanders alike 📱. Features reach from tracking of runners and there current leaderboard position,
-challenges with others as well as personalized results, badges and more. On the day of the run, it successfully scaled
-to tens of thousands of runners and fans.
+A custom app was developed for the 2018 and 2019 editions of the Cologne Marathon 🏃‍♀️🏃, delivering a complete
+experience for both runners and spectators 📱.
+
+The app offered live runner tracking, real-time leaderboard positions, social challenges, personalized results,
+achievement badges, and more. On race day, it successfully scaled to support tens of thousands of active users—runners
+and fans alike.

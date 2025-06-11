@@ -26,8 +26,8 @@
   },
   "type": "module",
   "engines": {
-    "node": "20.18.0",
-    "npm": "10.9.0"
+    "node": "22.16.0",
+    "npm": "11.4.1"
   },
   "dependencies": {
     "maplibre-gl": "5.5.0",

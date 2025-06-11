@@ -4,7 +4,7 @@ import htmlnano from 'htmlnano';
 const shouldTransformHTML = (outputPath) => outputPath && outputPath.endsWith('.html');
 
 export async function htmlMinify(content, outputPath) {
-  return shouldTransformHTML(outputPath) ? (await htmlnano.process(content)).html : content;
+  return shouldTransformHTML(outputPath) ? (await htmlnano.process(content, {minifyCss: false, minifyJs: false, minifySvg: false})).html : content;
 }
 
 export function externalLinks(content, outputPath) {

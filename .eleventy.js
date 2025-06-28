@@ -6,7 +6,7 @@ import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import EleventyPluginRss from '@11ty/eleventy-plugin-rss';
 import markdownItAnchor from 'markdown-it-anchor';
 
-import PluginShikiTwoslash from './plugins/shiki-twoslash.js';
+import PluginShiki from './plugins/shiki.js';
 import PluginDrafts from './plugins/drafts.js';
 import * as filters from './utils/filters.js';
 import * as shortcodes from './utils/shortcodes.js';
@@ -64,7 +64,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(NavigationPlugin);
   eleventyConfig.addPlugin(EleventyPluginRss);
-  eleventyConfig.addPlugin(PluginShikiTwoslash);
+  eleventyConfig.addPlugin(PluginShiki);
   eleventyConfig.addPlugin(PluginDrafts);
 
   eleventyConfig.amendLibrary('md', (mdLib) => {

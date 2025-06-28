@@ -1,4 +1,3 @@
-import { transformerTwoslash } from '@shikijs/twoslash';
 import { createHighlighter } from 'shiki/bundle/full';
 
 /**
@@ -22,9 +21,6 @@ export default async function (eleventyConfig) {
           light: 'one-light',
         },
         lang,
-        ...(['javascript', 'typescript', 'jsx', 'tsx', 'json'].includes(lang) && {
-          transformers: [transformerTwoslash()],
-        }),
       },
     ),
   );

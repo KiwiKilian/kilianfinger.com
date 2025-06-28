@@ -43,6 +43,7 @@ export default function (eleventyConfig) {
   const eleventyPluginOgImageOptions = {
     outputDir: 'assets',
     outputFileSlug: async (ogImage) => `og-image.${await ogImage.hash()}`,
+    previewMode: false,
     satoriOptions: {
       fonts: [
         {

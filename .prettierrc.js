@@ -1,4 +1,4 @@
-import prettierConfig from '@kiwikilian/prettier-config' assert { type: 'json' };
+import prettierConfig from '@kiwikilian/prettier-config' with { type: 'json' };
 
 /** @type {import("prettier").Config} */
 const config = {

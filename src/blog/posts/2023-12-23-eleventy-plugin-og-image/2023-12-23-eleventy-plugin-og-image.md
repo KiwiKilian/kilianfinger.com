@@ -55,7 +55,7 @@ Afterward we add the plugin to our `.eleventy.js`. Note, this example configurat
 with `@11ty/eleventy@3.0.0`. You need to load all fonts, which are used in your
 OG-image-templates:
 
-```js
+```javascript
 import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 
 /** @param { import('@11ty/eleventy/src/UserConfig').default } eleventyConfig */

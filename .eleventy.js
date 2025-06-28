@@ -64,10 +64,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(NavigationPlugin);
   eleventyConfig.addPlugin(EleventyPluginRss);
-  eleventyConfig.addPlugin(PluginShikiTwoslash, {
-    themes: ['../../../src/assets/shiki/OneDark-Pro'],
-    theme: 'One Dark Pro',
-  });
+  eleventyConfig.addPlugin(PluginShikiTwoslash);
   eleventyConfig.addPlugin(PluginDrafts);
 
   eleventyConfig.amendLibrary('md', (mdLib) => {

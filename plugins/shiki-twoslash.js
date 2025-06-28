@@ -1,14 +1,31 @@
-import { setupForFile, transformAttributesToHTML } from 'remark-shiki-twoslash';
+import { transformerTwoslash } from '@shikijs/twoslash';
+import { createHighlighter } from 'shiki/bundle/full';
 
 /**
  * @param {*} eleventyConfig
- * @param {import("shiki-twoslash").UserConfigSettings} options
  */
-export default async function (eleventyConfig, options = {}) {
-  const { highlighters } = await setupForFile(options);
-
-  eleventyConfig.addMarkdownHighlighter((code, lang, fence) => {
-    code = code.replace(/\r?\n$/, '').replace(/^\r?\n/, ''); // Strip new lines at beginning/end
-    return transformAttributesToHTML(code, [lang, fence].join(' '), highlighters, options);
+export default async function (eleventyConfig) {
+  const highlighter = await createHighlighter({
+    themes: ['one-dark-pro', 'one-light'],
+    langs: ['shell', 'html', 'twig', 'javascript'],
   });
+
+  eleventyConfig.addMarkdownHighlighter((code, lang) =>
+    highlighter.codeToHtml(
+      code
+        .replace(/\r?\n$/, '')
+        .replace(/^\r?\n/, '')
+        .replace(/&quot;/g, '"'),
+      {
+        themes: {
+          dark: 'one-dark-pro',
+          light: 'one-light',
+        },
+        lang,
+        ...(['javascript', 'typescript', 'jsx', 'tsx', 'json'].includes(lang) && {
+          transformers: [transformerTwoslash()],
+        }),
+      },
+    ),
+  );
 }

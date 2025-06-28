@@ -6,7 +6,7 @@ Build with [Eleventy](https://github.com/11ty/eleventy).
 
 ## Development
 
-```shell
+```bash
 npm install
 npm start
 ```
@@ -15,7 +15,7 @@ npm start
 
 Uses [`vale`](https://vale.sh/docs/vale-cli/installation/) for spellchecking.
 
-```shell
+```bash
 vale src/**/*.md
 vale *.md
 ```

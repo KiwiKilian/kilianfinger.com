@@ -7,11 +7,11 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rollupOptions: {
       output: {
-        experimentalMinChunkSize: 0,
-        assetFileNames: (assetInfo) =>
-          ['.jpeg', '.png', '.avif', '.webp'].includes(path.extname(assetInfo.name))
+        assetFileNames: (chunkInfo) => {
+          return ['.jpeg', '.png', '.avif', '.webp'].includes(path.extname(chunkInfo.names[0]))
             ? 'assets/[name].[ext]'
-            : 'assets/[name].[hash].[ext]',
+            : 'assets/[name].[hash].[ext]';
+        },
       },
     },
   },

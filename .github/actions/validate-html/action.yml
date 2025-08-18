@@ -4,6 +4,6 @@ description: Validate the site HTML
 runs:
   using: composite
   steps:
-    - uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+    - uses: Cyb3r-Jak3/html5validator-action@v8.0.0
       with:
         config: ./.github/actions/validate-html/config.yml

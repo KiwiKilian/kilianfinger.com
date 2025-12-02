@@ -3,7 +3,6 @@ layout: layouts/project
 title: Cologne Marathon App
 projectSlug: cologne-marathon
 themeColor: '#d53741'
-projectAttribution: pooliestudios
 ---
 
 A custom app was developed for the 2018 and 2019 editions of the Cologne Marathon 🏃‍♀️🏃, delivering a complete

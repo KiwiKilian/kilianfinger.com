@@ -25,9 +25,9 @@ layout: layouts/base
 
     {% if projectAttribution %}
       <div class="project-attribution">
-        <div class="project-attribution__label">A project by</div>
+        <div class="project-attribution__label">Employer:</div>
 
-        {% if projectAttribution == 'trafficon' %}
+        {% if projectAttribution.employer == 'trafficon' %}
           <a title="Trafficon" href="https://www.trafficon.eu/">
             <img
               class="project-attribution__image"
@@ -39,7 +39,7 @@ layout: layouts/base
           </a>
         {% endif %}
 
-        {% if projectAttribution == 'pooliestudios' %}
+        {% if projectAttribution.employer == 'pooliestudios' %}
           <a title="pooliestudios" href="https://web.archive.org/web/20180319141342/https://pooliestudios.com/">
             <img
               class="project-attribution__image"
@@ -49,6 +49,16 @@ layout: layouts/base
               src="/assets/images/projects/pooliestudios.svg"
             />
           </a>
+        {% endif %}
+
+        {% if projectAttribution.client %}
+          <br />
+          <div>Client: {{ projectAttribution.client }}</div>
+        {% endif %}
+        {% if projectAttribution.link %}
+          <a class="project-attribution__info-link" href="{{ projectAttribution.link }}"
+            >Project <span>Website</span></a
+          >
         {% endif %}
       </div>
     {% endif %}

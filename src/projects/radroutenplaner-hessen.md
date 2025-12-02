@@ -3,7 +3,6 @@ layout: layouts/project
 title: Radroutenplaner Hessen
 projectSlug: radroutenplaner-hessen
 themeColor: '#1c65ab'
-projectAttribution: trafficon
 ---
 
 Radroutenplaner Hessen is a native Android and iOS app that offers route planning for both commuters and tourists

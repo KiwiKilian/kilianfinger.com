@@ -3,7 +3,6 @@ layout: layouts/project
 title: Radlkarte Salzburg
 projectSlug: radlkarte-salzburg
 themeColor: '#00aeea'
-projectAttribution: trafficon
 ---
 
 Radlkarte Salzburg is a web application for bicycle route planning in the Austrian state of Salzburg 🇦🇹. Developed in

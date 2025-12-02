@@ -3,7 +3,6 @@ layout: layouts/project
 title: Dynamic Traffic Monitor
 projectSlug: dynamic-traffic-monitor
 themeColor: '#b9ce00'
-projectAttribution: trafficon
 ---
 
 Dynamic Traffic Monitor is a SaaS platform for real-time monitoring and analysis of traffic data. Built on a scalable

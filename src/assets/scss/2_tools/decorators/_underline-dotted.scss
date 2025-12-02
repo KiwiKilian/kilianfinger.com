@@ -4,6 +4,7 @@
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-decoration-color: $color;
+      text-decoration-thickness: 2px;
     }
 
     &:hover span {
@@ -13,6 +14,7 @@
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-color: $color;
+    text-decoration-thickness: 2px;
 
     &:hover {
       text-decoration-style: solid;

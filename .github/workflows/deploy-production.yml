@@ -24,7 +24,7 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: build
           path: _site
@@ -39,7 +39,7 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: build
           path: _site
@@ -55,7 +55,7 @@ jobs:
       url: https://www.kilianfinger.com
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: build
       - uses: easingthemes/ssh-deploy@v5.1.1

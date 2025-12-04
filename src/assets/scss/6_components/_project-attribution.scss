@@ -1,4 +1,9 @@
 .project-attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include rfs(1rem, gap);
   text-align: center;
   @include font-size(1rem);
 
@@ -7,17 +12,23 @@
     width: auto;
   }
 
-  &__label {
-    @include margin-bottom(0.5rem);
+  &__employer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include rfs(0.5rem, gap);
+  }
+
+  &__employer-label {
     white-space: nowrap;
   }
 
-  &__link {
-    display: block;
+  &__employer-link {
+    display: inline-flex;
   }
 
-  &__image {
-    display: inline-block;
+  &__employer-image {
     width: 200px;
     height: auto;
     margin-left: auto;
@@ -26,7 +37,5 @@
 
   &__info-link {
     @include underline-dotted(var(--yellow), true);
-    @include margin-top(1rem);
-    display: inline-block;
   }
 }

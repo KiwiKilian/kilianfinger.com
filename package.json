@@ -30,7 +30,7 @@
     "npm": "11.6.4"
   },
   "dependencies": {
-    "maplibre-gl": "5.13.0",
+    "maplibre-gl": "5.14.0",
     "party-js": "2.2.0",
     "rfs": "10.0.0"
   },

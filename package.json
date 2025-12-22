@@ -42,7 +42,7 @@
     "@11ty/eleventy-plugin-vite": "7.1.0-alpha.2",
     "@kiwikilian/prettier-config": "1.0.1",
     "cheerio": "1.1.2",
-    "eleventy-plugin-og-image": "4.1.0",
+    "eleventy-plugin-og-image": "4.2.1",
     "htmlnano": "2.1.2",
     "js-yaml": "4.1.0",
     "markdown-it-anchor": "9.2.0",

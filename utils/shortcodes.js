@@ -31,7 +31,7 @@ export async function imageShortcode({
       sizes: '(min-width: 2060px) 560px, (min-width: 680px) calc(23.09vw + 89px), 65vw',
     },
     projectsCover: {
-      widths: [256, 572, 940, 1200],
+      widths: [256, 572, 724, 940, 1200],
       sizes: '(min-width: 1440px) 614px, (min-width: 680px) calc(45.54vw - 28px), calc(98.89vw - 43px)',
     },
     projectsMockup: {

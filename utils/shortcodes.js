@@ -19,6 +19,7 @@ export async function imageShortcode({
   widths: customWidths,
   sizes: customSizes,
   class: className = '',
+  fetchpriority,
   loading = 'lazy',
   decoding = 'async',
 }) {
@@ -77,6 +78,7 @@ export async function imageShortcode({
                   sizes="${sizes}"
                   width="${imgData[imgData.length - 1].width}"
                   height="${imgData[imgData.length - 1].height}"
+                  ${fetchpriority ? `fetchpriority="${fetchpriority}"` : ''}
                   loading="${loading}"
                   decoding="${decoding}"
                   alt="${alt}" 
